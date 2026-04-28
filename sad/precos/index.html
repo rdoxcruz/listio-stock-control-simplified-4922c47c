@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preços — Listio | Simples, transparente, sem surpresas</title>
+  <meta name="description"
+    content="Comece grátis e evolua conforme sua operação crescer. Conheça nossos planos Mensal e Anual.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Floating nav CSS (estilos visuais do pill) -->
+  <link href="/assets/css/floating-menu.css" rel="stylesheet" />
+
+  <!-- components.js — substitui nav.js e floating-menu.js -->
+  <script src="/components.js" defer></script>
+
+  <style>
+    :root {
+      --lm-bg: #f5f5eb;
+      --lm-lime: #C8F135;
+      --lm-dark: #0e0e0c;
+      --lm-text-sub: rgba(14, 14, 12, 0.55);
+      --lm-border: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--lm-dark);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ── */
+    .precos-hero-wrap {
+      background: #f5f5eb;
+    }
+
+    .precos-hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 40px 80px;
+      text-align: center;
+    }
+
+    .lm-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(14, 14, 12, 0.5);
+      margin-bottom: 24px;
+    }
+
+    .lm-eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #0e0e0c;
+      opacity: 0.5;
+    }
+
+    .precos-hero__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(44px, 7vw, 72px);
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: #0e0e0c;
+      margin-bottom: 24px;
+    }
+
+    .precos-hero__sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      color: rgba(14, 14, 12, 0.55);
+      line-height: 1.65;
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    .precos-hero__ctas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .precos-cta-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #0e0e0c;
+      color: #f5f5eb;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 13px 13px 13px 22px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .precos-cta-dark:hover {
+      background: #2a2a28;
+    }
+
+    .precos-cta-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #C8F135;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .precos-cta-circle svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: #0e0e0c;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .precos-cta-outline {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #0e0e0c;
+      padding: 13px 22px;
+      border-radius: 100px;
+      border: 2px solid rgba(14, 14, 12, 0.25);
+      text-decoration: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .precos-cta-outline:hover {
+      border-color: #0e0e0c;
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* Toggle centralizado */
+    .pricing-toggle-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    @media(max-width: 640px) {
+      .precos-hero {
+        padding: 48px 24px 60px;
+      }
+    }
+
+    /* ── PRICING CARDS ── */
+    .section-planos {
+      background: #fff;
+      padding: 80px 0 100px;
+    }
+
+    .pricing-cards {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 0 40px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border: 1px solid var(--lm-border);
+      border-radius: 24px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .pricing-card--featured {
+      border: 2px solid var(--lm-lime);
+      position: relative;
+    }
+
+    .pricing-card__badge {
+      position: absolute;
+      top: 0;
+      right: 32px;
+      transform: translateY(-50%);
+      background: var(--lm-lime);
+      color: var(--lm-dark);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      text-transform: uppercase;
+    }
+
+    .pricing-card__icon {
+      width: 44px;
+      height: 44px;
+      background: #f8f8f4;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .pricing-card__title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .pricing-card__price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .pricing-card__amount {
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    .pricing-card__period {
+      font-size: 14px;
+      color: var(--lm-text-sub);
+    }
+
+    .pricing-card__description {
+      font-size: 14px;
+      color: var(--lm-text-sub);
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .pricing-card__features {
+      list-style: none;
+      margin-bottom: 40px;
+      flex: 1;
+    }
+
+    .pricing-card__features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #444;
+    }
+
+    .pricing-card__features i {
+      color: #22a85a;
+      margin-top: 2px;
+    }
+
+    .pricing-card__btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 14px;
+      border-radius: 100px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .pricing-card__btn--outline {
+      border: 2px solid var(--lm-border);
+      color: var(--lm-dark);
+    }
+
+    .pricing-card__btn--dark {
+      background: var(--lm-dark);
+      color: #fff;
+    }
+
+    @media(max-width: 900px) {
+      .pricing-cards {
+        grid-template-columns: 1fr;
+        padding: 0 24px;
+      }
+    }
+
+    /* ── TOGGLE ── */
+    .pricing-toggle {
+      display: flex;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 100px;
+      padding: 4px;
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+
+    .pricing-toggle__btn {
+      border: none;
+      background: transparent;
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--lm-text-sub);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .pricing-toggle__btn.is-active {
+      background: #fff;
+      color: var(--lm-dark);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing-toggle__save {
+      background: var(--lm-lime);
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 100px;
+      margin-left: 4px;
+    }
+
+    /* ── COMPARISON ── */
+    .section-compare {
+      padding: 100px 0;
+      background: #fafaf6;
+    }
+
+    .lm-section-head {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .lm-section-head h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      color: #0e0e0c;
+      margin-bottom: 0;
+    }
+
+    .compare-table-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow-x: auto;
+      padding: 0 40px;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+      min-width: 600px;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 16px 20px;
+      text-align: center;
+      border-bottom: 1px solid #f0f0ea;
+      font-size: 14px;
+    }
+
+    .compare-table th:first-child,
+    .compare-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .compare-table .col-listio {
+      background: rgba(200, 241, 53, 0.05);
+    }
+
+    /* ── FAQ — estilo idêntico à home ── */
+    .section-faq {
+      background: #f5f5eb;
+      padding: 88px 0;
+    }
+
+    .faq-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    @media(max-width: 700px) {
+      .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .faq-container {
+        padding: 0 20px;
+      }
+    }
+
+    .faq-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #999990;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .faq-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(32px, 3.5vw, 44px);
+      font-weight: 700;
+      color: #0e0e0c;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+    }
+
+    .faq-subtext {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #88887e;
+      line-height: 1.65;
+    }
+
+    .faq-items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #d8d7d0;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0;
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0e0e0c;
+      line-height: 1.3;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #e2e1d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .faq-btn svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: #555550;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      transition: transform 0.2s;
+    }
+
+    details[open] .faq-btn {
+      background: #C8F135;
+    }
+
+    details[open] .faq-btn svg {
+      stroke: #0e0e0c;
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #66665e;
+      line-height: 1.7;
+      padding-bottom: 20px;
+    }
+
+    /* ── ANIMAÇÕES — mesmo sistema da home ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+        filter: blur(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        filter: blur(4px);
+      }
+
+      to {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.94);
+        filter: blur(5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+      }
+    }
+
+    [data-anim] {
+      opacity: 0;
+    }
+
+    [data-anim].is-visible {
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+      animation-duration: 0.72s;
+    }
+
+    [data-anim="fade-up"].is-visible {
+      animation-name: fadeUp;
+    }
+
+    [data-anim="fade-in"].is-visible {
+      animation-name: fadeIn;
+    }
+
+    [data-anim="scale-in"].is-visible {
+      animation-name: scaleIn;
+    }
+
+    [data-delay="1"] {
+      animation-delay: 0.08s;
+    }
+
+    [data-delay="2"] {
+      animation-delay: 0.16s;
+    }
+
+    [data-delay="3"] {
+      animation-delay: 0.24s;
+    }
+
+    [data-delay="4"] {
+      animation-delay: 0.32s;
+    }
+
+    [data-delay="5"] {
+      animation-delay: 0.42s;
+    }
+
+    /* Hero anima direto sem IntersectionObserver */
+    .hero-anim-1 {
+      animation: fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.10s both;
+    }
+
+    .hero-anim-2 {
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+    }
+
+    .hero-anim-3 {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
+    }
+
+    .hero-anim-4 {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.50s both;
+    }
+
+    .hero-anim-5 {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.62s both;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      [data-anim],
+      [data-anim].is-visible,
+      .hero-anim-1,
+      .hero-anim-2,
+      .hero-anim-3,
+      .hero-anim-4,
+      .hero-anim-5 {
+        opacity: 1 !important;
+        animation: none !important;
+        filter: none !important;
+        transform: none !important;
+      }
+    }
+  </style>
+
+<body>
+
+  <!-- Header — primeiro elemento do body, fora do hero -->
+  <div id="site-header"></div>
+
+  <!-- Hero com estética da home — centralizado, sem imagem -->
+  <div class="precos-hero-wrap">
+    <section class="precos-hero">
+      <div class="lm-eyebrow hero-anim-1">
+        <span class="lm-eyebrow-dot"></span>
+        Preços
+      </div>
+      <h1 class="precos-hero__title hero-anim-2">Simples, transparente,<br>sem surpresas.</h1>
+      <p class="precos-hero__sub hero-anim-3">Comece grátis e evolua conforme sua operação crescer. Sem cartão de
+        crédito.</p>
+      <div class="precos-hero__ctas hero-anim-4">
+        <a class="precos-cta-dark" href="https://app.listio.com.br/cadastro">
+          Começar agora — grátis
+          <span class="precos-cta-circle">
+            <svg viewBox="0 0 12 12">
+              <line x1="2" y1="6" x2="10" y2="6" />
+              <polyline points="7 3 10 6 7 9" />
+            </svg>
+          </span>
+        </a>
+        <a class="precos-cta-outline" href="#comparativo">Ver comparativo</a>
+      </div>
+      <div class="pricing-toggle-wrap hero-anim-5">
+        <div class="pricing-toggle">
+          <button class="pricing-toggle__btn is-active" data-period="monthly">Mensal</button>
+          <button class="pricing-toggle__btn" data-period="annual">
+            Anual <span class="pricing-toggle__save">−26%</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main>
+
+    <!-- PLANS -->
+    <section class="section-planos">
+      <div class="pricing-cards">
+        <!-- GRATUITO -->
+        <article class="pricing-card" data-anim="scale-in" data-delay="1">
+          <div class="pricing-card__icon"><i data-lucide="zap"></i></div>
+          <h3 class="pricing-card__title">Gratuito</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">R$ 0</span>
+            <span class="pricing-card__period">/mês</span>
+          </div>
+          <p class="pricing-card__description">Para começar e organizar a rotina de estoque</p>
+          <ul class="pricing-card__features">
+            <li><i data-lucide="check"></i> Até 100 produtos</li>
+            <li><i data-lucide="check"></i> 1 usuário</li>
+            <li><i data-lucide="check"></i> Checklists ilimitados</li>
+          </ul>
+          <a href="https://app.listio.com.br/cadastro" class="pricing-card__btn pricing-card__btn--outline">Começar
+            agora</a>
+        </article>
+
+        <!-- PRO -->
+        <article class="pricing-card pricing-card--featured" data-anim="scale-in" data-delay="2">
+          <span class="pricing-card__badge">Recomendado</span>
+          <div class="pricing-card__icon"><i data-lucide="crown"></i></div>
+          <h3 class="pricing-card__title">Pro</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount" id="price-pro">R$ 39</span>
+            <span class="pricing-card__period">/mês</span>
+          </div>
+          <p class="pricing-card__description">Para operações em pleno crescimento</p>
+          <ul class="pricing-card__features">
+            <li><i data-lucide="check"></i> Produtos ilimitados</li>
+            <li><i data-lucide="check"></i> Até 5 usuários</li>
+            <li><i data-lucide="check"></i> Checklists ilimitados</li>
+            <li><i data-lucide="check"></i> Automação de pedidos</li>
+            <li><i data-lucide="check"></i> Suporte prioritário</li>
+          </ul>
+          <a href="https://app.listio.com.br/cadastro" class="pricing-card__btn pricing-card__btn--dark">Assinar Pro</a>
+        </article>
+
+        <!-- MULTI -->
+        <article class="pricing-card" data-anim="scale-in" data-delay="3">
+          <div class="pricing-card__icon"><i data-lucide="building-2"></i></div>
+          <h3 class="pricing-card__title">Multi-loja</h3>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount" id="price-multi">R$ 79</span>
+            <span class="pricing-card__period">/mês</span>
+          </div>
+          <p class="pricing-card__description">Para redes de lojas e franquias</p>
+          <ul class="pricing-card__features">
+            <li><i data-lucide="check"></i> Lojas ilimitadas</li>
+            <li><i data-lucide="check"></i> Usuários ilimitados</li>
+            <li><i data-lucide="check"></i> Visão consolidada</li>
+            <li><i data-lucide="check"></i> Tudo do plano Pro</li>
+          </ul>
+          <a href="https://app.listio.com.br/cadastro" class="pricing-card__btn pricing-card__btn--outline">Falar com
+            vendas</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="section-compare" id="comparativo">
+      <div class="lm-section-head">
+        <div class="lm-eyebrow" data-anim="fade-in"><span class="lm-eyebrow-dot"></span>Comparação</div>
+        <h2 class="lm-title" data-anim="fade-up" data-delay="1">Chega de improvisar seu controle.</h2>
+      </div>
+      <div class="compare-table-wrap" data-anim="fade-up" data-delay="2">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Funcionalidade</th>
+              <th>📓 Caderno</th>
+              <th>📊 Planilha</th>
+              <th class="col-listio">⚡ Listio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Registra estoque atual</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td class="col-listio">✓</td>
+            </tr>
+            <tr>
+              <td>Cálculo de reposição</td>
+              <td>✗</td>
+              <td>Manual</td>
+              <td class="col-listio">✓ Automático</td>
+            </tr>
+            <tr>
+              <td>Separar por fornecedor</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td class="col-listio">✓ Automático</td>
+            </tr>
+            <tr>
+              <td>Fácil para funcionários</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td class="col-listio">✓</td>
+            </tr>
+            <tr>
+              <td>Funciona no celular</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td class="col-listio">✓</td>
+            </tr>
+            <tr>
+              <td>Histórico de contagem</td>
+              <td>✗</td>
+              <td>Difícil</td>
+              <td class="col-listio">✓</td>
+            </tr>
+            <tr>
+              <td>Tempo necessário</td>
+              <td>Horas</td>
+              <td>Minutos</td>
+              <td class="col-listio">Segundos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ — estilo idêntico à home -->
+    <section class="section-faq" id="faq">
+      <div class="faq-container">
+        <div class="faq-layout">
+          <div data-anim="fade-up">
+            <span class="faq-eyebrow">Dúvidas comuns</span>
+            <h2 class="faq-heading">Perguntas<br>Frequentes</h2>
+            <p class="faq-subtext">As perguntas que mais ouvimos de quem está escolhendo um plano.</p>
+          </div>
+          <div class="faq-items">
+            <details class="faq-item" open data-anim="fade-up" data-delay="1">
+              <summary>Tem limite de produtos?<span class="faq-btn"><svg viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="faq-answer">No plano gratuito o limite é de 100 itens. Nos planos Pro e Multi-loja, o cadastro
+                de produtos é ilimitado.</p>
+            </details>
+            <details class="faq-item" data-anim="fade-up" data-delay="2">
+              <summary>Posso cancelar a qualquer momento?<span class="faq-btn"><svg viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="faq-answer">Sim, sem multas ou fidelidade. No plano mensal, o cancelamento interrompe a cobrança
+                do próximo mês. No anual, você mantém o acesso até o fim do período já pago.</p>
+            </details>
+            <details class="faq-item" data-anim="fade-up" data-delay="3">
+              <summary>Como funciona o suporte?<span class="faq-btn"><svg viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="faq-answer">Oferecemos suporte via chat e e-mail. Clientes Pro e Multi-loja contam com
+                atendimento prioritário para resolver qualquer dúvida rapidamente.</p>
+            </details>
+            <details class="faq-item" data-anim="fade-up" data-delay="4">
+              <summary>O plano Multi-loja serve para quantas unidades?<span class="faq-btn"><svg viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="faq-answer">Para quantas você precisar! Ele centraliza a gestão de todas as suas lojas em um
+                único painel, com visão consolidada de estoque e pedidos.</p>
+            </details>
+            <details class="faq-item" data-anim="fade-up" data-delay="5">
+              <summary>Preciso de cartão de crédito para começar?<span class="faq-btn"><svg viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="faq-answer">Não. Você pode começar gratuitamente, testar a reposição sugerida na sua rotina e só
+                depois decidir se quer evoluir para um plano pago.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer injetado pelo components.js -->
+  <div id="site-footer"></div>
+
+  <!-- Floating nav injetado pelo components.js -->
+  <div id="site-floating-nav"></div>
+
+  <script>
+    // IntersectionObserver — mesmo sistema da home
+    (function () {
+      var els = document.querySelectorAll('[data-anim]');
+      if (!els.length) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+
+    // Pricing Toggle
+    const toggleBtns = document.querySelectorAll('.pricing-toggle__btn');
+    const proAmount = document.getElementById('price-pro');
+    const multiAmount = document.getElementById('price-multi');
+
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        toggleBtns.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const period = btn.dataset.period;
+        if (period === 'annual') {
+          proAmount.innerText = 'R$ 29';
+          multiAmount.innerText = 'R$ 59';
+        } else {
+          proAmount.innerText = 'R$ 39';
+          multiAmount.innerText = 'R$ 79';
+        }
+      });
+    });
+
+    // Lucide para ícones do conteúdo da página
+    // Ícones do header/footer são inicializados pelo components.js
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+
+</body>
+
+</html>

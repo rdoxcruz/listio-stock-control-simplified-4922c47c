@@ -1,0 +1,395 @@
+{
+  "summary": {
+    "original_page_css_files": 196,
+    "shared_bundle_files": 27,
+    "html_files_updated": 196,
+    "reduction_percent": 86.22
+  },
+  "bundles": [
+    {
+      "bundle": "/assets/css/bundles/blog-en-balancing-availability-liquidity-physical-retailers.css",
+      "representative": "/assets/css/pages/en-blog-balancing-availability-liquidity-physical-retailers.css",
+      "pages_count": 49,
+      "source_files": [
+        "/assets/css/pages/en-blog-balancing-availability-liquidity-physical-retailers.css",
+        "/assets/css/pages/en-blog-best-retail-system-customers-use.css",
+        "/assets/css/pages/en-blog-building-inventory-system-physical-business.css",
+        "/assets/css/pages/en-blog-building-inventory-system-physical-businesses.css",
+        "/assets/css/pages/en-blog-building-strategic-supplier-relationships-physical-sales.css",
+        "/assets/css/pages/en-blog-calculating-inventory-turnover-physical-retailers.css",
+        "/assets/css/pages/en-blog-cash-position-purchase-decisions-physical-retail.css",
+        "/assets/css/pages/en-blog-dead-stock-identifying-early-protect-profits.css",
+        "/assets/css/pages/en-blog-hidden-cost-just-in-case-purchases.css",
+        "/assets/css/pages/en-blog-identifying-excess-inventory-key-indicators.css",
+        "/assets/css/pages/en-blog-inventory-synchronization-success-physical-sales.css",
+        "/assets/css/pages/en-blog-leverage-inventory-retail-success.css",
+        "/assets/css/pages/en-blog-main-causes-stockouts-physical-retail.css",
+        "/assets/css/pages/en-blog-mastering-inventory-reports-physical-retailers.css",
+        "/assets/css/pages/en-blog-mastering-inventory-turnover-physical-retailers.css",
+        "/assets/css/pages/en-blog-maximizing-accuracy-periodic-inventory-counts-retail.css",
+        "/assets/css/pages/en-blog-maximizing-average-order-value-inventory-management.css",
+        "/assets/css/pages/en-blog-maximizing-daily-cash-flow-inventory-management.css",
+        "/assets/css/pages/en-blog-maximizing-efficiency-inventory-management-brick-and-mortar.css",
+        "/assets/css/pages/en-blog-maximizing-freshness-expiration-date-shelf-life-control-retailers.css",
+        "/assets/css/pages/en-blog-maximizing-inventory-competitive-advantage-brick-and-mortar.css",
+        "/assets/css/pages/en-blog-maximizing-profits-inventory-management-turnover-not-volume.css",
+        "/assets/css/pages/en-blog-maximizing-sales-inventory-mapping-physical-store.css",
+        "/assets/css/pages/en-blog-maximizing-sales-inventory-mapping-strategy.css",
+        "/assets/css/pages/en-blog-navigating-growth-prevent-operational-chaos-physical-retail.css",
+        "/assets/css/pages/en-blog-navigating-product-variants-brick-and-mortar.css",
+        "/assets/css/pages/en-blog-navigating-risks-decentralized-inventory-retailers.css",
+        "/assets/css/pages/en-blog-navigating-risks-decentralized-inventory.css",
+        "/assets/css/pages/en-blog-optimizing-inventory-control-growing-retail.css",
+        "/assets/css/pages/en-blog-optimizing-inventory-management-franchise-success.css",
+        "/assets/css/pages/en-blog-optimizing-inventory-management-hybrid-operations-retailers.css",
+        "/assets/css/pages/en-blog-optimizing-inventory-reducing-replenishment-costs.css",
+        "/assets/css/pages/en-blog-optimizing-inventory-replenishment-actual-sales.css",
+        "/assets/css/pages/en-blog-optimizing-inventory-routines-small-retail-teams.css",
+        "/assets/css/pages/en-blog-optimizing-order-tracking-brick-and-mortar-businesses.css",
+        "/assets/css/pages/en-blog-optimizing-physical-store-mobile-inventory-management.css",
+        "/assets/css/pages/en-blog-optimizing-retail-strategy-inventory-sales-integration.css",
+        "/assets/css/pages/en-blog-optimizing-weekly-inventory-routines-retail-success.css",
+        "/assets/css/pages/en-blog-real-time-inventory-tracking-benefits.css",
+        "/assets/css/pages/en-blog-reducing-fire-drills-enhancing-predictability-retail-operations.css",
+        "/assets/css/pages/en-blog-scaling-business-inventory-preparation.css",
+        "/assets/css/pages/en-blog-simplifying-operations-avoiding-overbuilt-systems.css",
+        "/assets/css/pages/en-blog-simplifying-retail-operations-automation-without-complexity.css",
+        "/assets/css/pages/en-blog-standardizing-purchase-orders-success-physical-sales.css",
+        "/assets/css/pages/en-blog-transition-spreadsheets-software-retail.css",
+        "/assets/css/pages/en-blog-understanding-customer-behavior-inventory-management.css",
+        "/assets/css/pages/en-blog-understanding-lead-time-effective-planning-physical-retail.css",
+        "/assets/css/pages/en-blog-warning-signs-inventory-control-failure.css",
+        "/assets/css/pages/en-blog-when-to-discontinue-product-strategic-guide.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-es-automatizacion-estandarizacion-negocios-fisicos.css",
+      "representative": "/assets/css/pages/es-blog-automatizacion-estandarizacion-negocios-fisicos.css",
+      "pages_count": 48,
+      "source_files": [
+        "/assets/css/pages/es-blog-automatizacion-estandarizacion-negocios-fisicos.css",
+        "/assets/css/pages/es-blog-compras-recurrentes-vs-puntuales-estrategias-negocio-fisico.css",
+        "/assets/css/pages/es-blog-consistencia-datos-negocio-fisico.css",
+        "/assets/css/pages/es-blog-consistencia-servicio-cliente-rotacion-personal.css",
+        "/assets/css/pages/es-blog-control-inventario-10-minutos.css",
+        "/assets/css/pages/es-blog-control-inventario-errores-comunes-negocio-fisico.css",
+        "/assets/css/pages/es-blog-control-inventario-por-variante-negocios-fisicos.css",
+        "/assets/css/pages/es-blog-crear-sistema-inventario-eficiente.css",
+        "/assets/css/pages/es-blog-cultura-control-inventario-negocios-fisicos.css",
+        "/assets/css/pages/es-blog-decisiones-inteligentes-promedios-enganosos-ventas-fisicas.css",
+        "/assets/css/pages/es-blog-definiendo-prioridades-inventario-exito-negocio-fisico.css",
+        "/assets/css/pages/es-blog-equilibrio-disponibilidad-liquidez-negocio-fisico.css",
+        "/assets/css/pages/es-blog-estandarizacion-nombres-productos-aumentar-ventas.css",
+        "/assets/css/pages/es-blog-estandarizacion-procesos-pilar-exito-retail.css",
+        "/assets/css/pages/es-blog-estrategias-manejar-proveedores-inestables-negocio-fisico.css",
+        "/assets/css/pages/es-blog-estrategias-ventas-saludables-exceso-compras.css",
+        "/assets/css/pages/es-blog-evitar-excesos-inventario-promociones-mal-planificadas.css",
+        "/assets/css/pages/es-blog-evitar-overselling-negocio-fisico.css",
+        "/assets/css/pages/es-blog-fortaleciendo-pilar-exito-capacitacion-equipo-ventas.css",
+        "/assets/css/pages/es-blog-gestion-inventarios-crecimiento-negocio-fisico.css",
+        "/assets/css/pages/es-blog-impacto-promociones-inventario-negocio-fisico.css",
+        "/assets/css/pages/es-blog-inventario-clave-exito-comercial.css",
+        "/assets/css/pages/es-blog-inventario-pilar-madurez-negocio-fisico.css",
+        "/assets/css/pages/es-blog-maximiza-espacio-organizacion-inventario-tiendas-pequenas.css",
+        "/assets/css/pages/es-blog-maximiza-tus-ventas-inventario-competitividad.css",
+        "/assets/css/pages/es-blog-maximiza-ventas-fisicas-integracion-proveedores.css",
+        "/assets/css/pages/es-blog-maximizando-sobrantes-negocios-fisicos.css",
+        "/assets/css/pages/es-blog-maximizando-valor-sobrantes-campanas-negocio-fisico.css",
+        "/assets/css/pages/es-blog-optimiza-control-pedidos-experiencia-cliente.css",
+        "/assets/css/pages/es-blog-optimiza-inventario-calcular-rotacion-sin-errores.css",
+        "/assets/css/pages/es-blog-optimiza-inventario-checklists-digitales.css",
+        "/assets/css/pages/es-blog-optimiza-inventario-pronostico-demanda-datos-reales.css",
+        "/assets/css/pages/es-blog-optimiza-inventario-ticket-promedio.css",
+        "/assets/css/pages/es-blog-optimiza-tu-inventario-clave-negocio-sin-estres.css",
+        "/assets/css/pages/es-blog-optimiza-tus-compras-centralizacion-pilar-exito-negocios-fisicos.css",
+        "/assets/css/pages/es-blog-optimizacion-ciclos-inventario-comparativa-estrategias.css",
+        "/assets/css/pages/es-blog-optimizacion-gestion-inventarios-negocios-fisicos.css",
+        "/assets/css/pages/es-blog-optimizacion-inventario-compras-exito-ventas-fisicas.css",
+        "/assets/css/pages/es-blog-optimizacion-inventario-rotacion-volumen.css",
+        "/assets/css/pages/es-blog-optimizacion-inventarios-exito-empresas-crecimiento.css",
+        "/assets/css/pages/es-blog-optimizacion-operaciones-ventas-fisicas.css",
+        "/assets/css/pages/es-blog-optimizando-estrategia-ventas-fisicas.css",
+        "/assets/css/pages/es-blog-optimizando-lead-time-experiencia-cliente.css",
+        "/assets/css/pages/es-blog-optimizando-ventas-analisis-historial-compras.css",
+        "/assets/css/pages/es-blog-prioridades-inventario-maximizar-ventas.css",
+        "/assets/css/pages/es-blog-senales-inventario-limite.css",
+        "/assets/css/pages/es-blog-simplifica-control-operativo-tranquilidad-empresarial.css",
+        "/assets/css/pages/es-blog-transformando-control-manual-estrategias-negocios-fisicos.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-pt-arte-de-vender-destino-irresistivel.css",
+      "representative": "/assets/css/pages/blog-arte-de-vender-destino-irresistivel.css",
+      "pages_count": 21,
+      "source_files": [
+        "/assets/css/pages/blog-arte-de-vender-destino-irresistivel.css",
+        "/assets/css/pages/blog-arte-encantar-cliente-loja-fisica.css",
+        "/assets/css/pages/blog-consistencia-controle-estoque-negocios-fisicos.css",
+        "/assets/css/pages/blog-consistencia-controle-vendas-fisicas.css",
+        "/assets/css/pages/blog-decisoes-rapidas-indicadores-negocio-fisico.css",
+        "/assets/css/pages/blog-decisoes-rapidas-indicadores-vendas-fisicas.css",
+        "/assets/css/pages/blog-descomplicando-planejamento-vendas-fisicas.css",
+        "/assets/css/pages/blog-estrategias-alinhar-estoque-compras-varejo.css",
+        "/assets/css/pages/blog-estrategias-evitar-crises-estoque.css",
+        "/assets/css/pages/blog-estrategias-gerenciar-estoque-vendas-fisicas.css",
+        "/assets/css/pages/blog-gerenciar-estoque-negocio-fisico-saudavel.css",
+        "/assets/css/pages/blog-gerenciar-estoque-negocio-saudavel.css",
+        "/assets/css/pages/blog-gerenciar-estoque-sem-complicar-memoria.css",
+        "/assets/css/pages/blog-giro-de-estoque-sucesso-vendas-fisicas.css",
+        "/assets/css/pages/blog-importancia-rotina-sucesso-varejo-fisico.css",
+        "/assets/css/pages/blog-maximizando-vendas-estoque-pilar-estrategico.css",
+        "/assets/css/pages/blog-organizacao-continua-pilar-sucesso-negocios-fisicos.css",
+        "/assets/css/pages/blog-organizacao-pilar-sucesso-vendas-fisicas.css",
+        "/assets/css/pages/blog-rotina-mensal-estoque-negocios-fisicos.css",
+        "/assets/css/pages/blog-transformando-sua-loja-organizacao-pilar-sucesso-continua.css",
+        "/assets/css/pages/blog-transformar-loja-destino-irresistivel.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-en-building-strategic-supplier-relationships-physical-retailers.css",
+      "representative": "/assets/css/pages/en-blog-building-strategic-supplier-relationships-physical-retailers.css",
+      "pages_count": 15,
+      "source_files": [
+        "/assets/css/pages/en-blog-building-strategic-supplier-relationships-physical-retailers.css",
+        "/assets/css/pages/en-blog-elevating-operational-maturity-inventory-control-retail.css",
+        "/assets/css/pages/en-blog-evaluating-business-maturity-inventory-management.css",
+        "/assets/css/pages/en-blog-maximizing-foot-traffic-map-store-layout.css",
+        "/assets/css/pages/en-blog-maximizing-in-store-experience.css",
+        "/assets/css/pages/en-blog-maximizing-sales-simple-inventory.css",
+        "/assets/css/pages/en-blog-minimize-shrinkage-damage-losses-retail.css",
+        "/assets/css/pages/en-blog-optimizing-physical-store-inventory.css",
+        "/assets/css/pages/en-blog-optimizing-physical-store-simple-inventory-healthy-business.css",
+        "/assets/css/pages/en-blog-optimizing-physical-store-simple-inventory-management.css",
+        "/assets/css/pages/en-blog-optimizing-physical-store-simple-inventory-strategies.css",
+        "/assets/css/pages/en-blog-optimizing-physical-store-simple-inventory-strategy.css",
+        "/assets/css/pages/en-blog-simple-management-strategies-physical-stores.css",
+        "/assets/css/pages/en-blog-transforming-business-continuous-organizational-mapping.css",
+        "/assets/css/pages/en-blog-weekly-inventory-review-key-areas-retail-business.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-es-adopcion-equipo-pilar-exito-ventas-fisicas.css",
+      "representative": "/assets/css/pages/es-blog-adopcion-equipo-pilar-exito-ventas-fisicas.css",
+      "pages_count": 12,
+      "source_files": [
+        "/assets/css/pages/es-blog-adopcion-equipo-pilar-exito-ventas-fisicas.css",
+        "/assets/css/pages/es-blog-fortaleciendo-exito-adopcion-equipo-negocios-fisicos.css",
+        "/assets/css/pages/es-blog-maximizando-potencial-inventario-negocios-fisicos.css",
+        "/assets/css/pages/es-blog-maximizando-ventas-tienda-fisica.css",
+        "/assets/css/pages/es-blog-optimiza-inventario-negocio-saludable.css",
+        "/assets/css/pages/es-blog-optimizacion-ventas-fisicas-automatizacion-transformacion.css",
+        "/assets/css/pages/es-blog-optimizando-inventario-negocios-saludables.css",
+        "/assets/css/pages/es-blog-organizacion-pilar-exito-ventas-fisicas.css",
+        "/assets/css/pages/es-blog-simplificar-inventario-negocio-saludable.css",
+        "/assets/css/pages/es-blog-transforma-tu-tienda-fisica-estrategias-aumentar-ventas.css",
+        "/assets/css/pages/es-blog-transformando-negocio-fisico-estrategias-mapeo-exito.css",
+        "/assets/css/pages/es-blog-transformando-tu-negocio-organizacion-pilar-exito-continuo.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-pt-controle-estoque-lojas-conveniencia.css",
+      "representative": "/assets/css/pages/blog-controle-estoque-lojas-conveniencia.css",
+      "pages_count": 9,
+      "source_files": [
+        "/assets/css/pages/blog-controle-estoque-lojas-conveniencia.css",
+        "/assets/css/pages/blog-estoque-ideal-reduzindo-estresse-operacional-varejo.css",
+        "/assets/css/pages/blog-fortalecendo-parcerias-relacionamento-fornecedores-estrategicos.css",
+        "/assets/css/pages/blog-identificar-reduzir-excesso-estoque-negocio-fisico.css",
+        "/assets/css/pages/blog-kpis-vendas-fisicas.css",
+        "/assets/css/pages/blog-maximizando-lucros-sobras-campanhas-vendas-fisicas.css",
+        "/assets/css/pages/blog-maximize-vendas-automacao-multipontos.css",
+        "/assets/css/pages/blog-priorize-o-que-importa-negocios-fisicos.css",
+        "/assets/css/pages/blog-quando-liquidar-estoque-e-quando-segurar.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-en-hidden-costs-poor-inventory-management-small.css",
+      "representative": "/assets/css/pages/en-blog-hidden-costs-poor-inventory-management-small-retail.css",
+      "pages_count": 8,
+      "source_files": [
+        "/assets/css/pages/en-blog-hidden-costs-poor-inventory-management-small-retail.css",
+        "/assets/css/pages/en-blog-maximizing-efficiency-stock-control-retailers.css",
+        "/assets/css/pages/en-blog-optimizing-inventory-control-single-location-retailers.css",
+        "/assets/css/pages/en-blog-revolutionize-retail-inventory-management.css",
+        "/assets/css/pages/en-blog-revolutionizing-inventory-management-spreadsheet-free-small-retail.css",
+        "/assets/css/pages/en-blog-transforming-physical-store-continuous-organizational-change.css",
+        "/assets/css/pages/es-blog-desmitificando-gestion-inventarios-tiendas-pequenas.css",
+        "/assets/css/pages/es-blog-inventario-pilar-negocio-fisico.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-pt-arte-de-vender-espaco-fisico.css",
+      "representative": "/assets/css/pages/blog-arte-de-vender-espaco-fisico.css",
+      "pages_count": 6,
+      "source_files": [
+        "/assets/css/pages/blog-arte-de-vender-espaco-fisico.css",
+        "/assets/css/pages/blog-arte-encantar-clientes-loja-fisica.css",
+        "/assets/css/pages/blog-aumentar-vendas-fisicas-marketing-local.css",
+        "/assets/css/pages/blog-encantar-cliente-experiencia-compra-fisica.css",
+        "/assets/css/pages/blog-experiencia-cliente-atendimento-presencial.css",
+        "/assets/css/pages/blog-transformando-vendas-fisicas.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-es-maximiza-espacio-tienda-estrategias-clave.css",
+      "representative": "/assets/css/pages/es-blog-maximiza-espacio-tienda-estrategias-clave.css",
+      "pages_count": 4,
+      "source_files": [
+        "/assets/css/pages/es-blog-maximiza-espacio-tienda-estrategias-clave.css",
+        "/assets/css/pages/es-blog-maximiza-tu-espacio-estrategias-para-una-tienda-fisica-eficiente.css",
+        "/assets/css/pages/es-blog-maximizando-espacio-estrategias-optimizar-tienda-fisica.css",
+        "/assets/css/pages/es-blog-transformando-negocio-organizacion-pilar-exito-continuo.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-help-public-html-pt.css",
+      "representative": "/assets/css/pages/help-public_html-pt.css",
+      "pages_count": 3,
+      "source_files": [
+        "/assets/css/pages/help-public_html-pt.css",
+        "/assets/css/pages/help-public_html.css",
+        "/assets/css/pages/help.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-pt-consistencia-controle-estoque-vendas-fisicas.css",
+      "representative": "/assets/css/pages/blog-consistencia-controle-estoque-vendas-fisicas.css",
+      "pages_count": 2,
+      "source_files": [
+        "/assets/css/pages/blog-consistencia-controle-estoque-vendas-fisicas.css",
+        "/assets/css/pages/blog-organizacao-continua-pilar-sucesso-vendas-fisicas.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-contato.css",
+      "representative": "/assets/css/pages/contato.css",
+      "pages_count": 2,
+      "source_files": [
+        "/assets/css/pages/contato.css",
+        "/assets/css/pages/es-contacto.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-es-optimizando-inventario-negocio-saludable.css",
+      "representative": "/assets/css/pages/es-blog-optimizando-inventario-negocio-saludable.css",
+      "pages_count": 2,
+      "source_files": [
+        "/assets/css/pages/es-blog-optimizando-inventario-negocio-saludable.css",
+        "/assets/css/pages/es-blog-organizacion-continua-exito-ventas-fisicas.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-termos.css",
+      "representative": "/assets/css/pages/es-termos.css",
+      "pages_count": 2,
+      "source_files": [
+        "/assets/css/pages/es-termos.css",
+        "/assets/css/pages/termos.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-pt-arte-de-vender-transformando-clientes-em.css",
+      "representative": "/assets/css/pages/blog-arte-de-vender-transformando-clientes-em-fas.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/blog-arte-de-vender-transformando-clientes-em-fas.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-pt-centralizacao-vs-autonomia-local-vendas-fisicas.css",
+      "representative": "/assets/css/pages/blog-centralizacao-vs-autonomia-local-vendas-fisicas.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/blog-centralizacao-vs-autonomia-local-vendas-fisicas.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-en-simplifying-stock-control-small-business.css",
+      "representative": "/assets/css/pages/en-blog-simplifying-stock-control-small-business.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/en-blog-simplifying-stock-control-small-business.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-en-simplifying-stock-control-small-retailers.css",
+      "representative": "/assets/css/pages/en-blog-simplifying-stock-control-small-retailers.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/en-blog-simplifying-stock-control-small-retailers.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/blog-en-transforming-your-business-continuous-organizational-improvement.css",
+      "representative": "/assets/css/pages/en-blog-transforming-your-business-continuous-organizational-improvement.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/en-blog-transforming-your-business-continuous-organizational-improvement.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-contact.css",
+      "representative": "/assets/css/pages/en-contact.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/en-contact.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-en.css",
+      "representative": "/assets/css/pages/en.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/en.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-precios.css",
+      "representative": "/assets/css/pages/es-precios.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/es-precios.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-privacidad.css",
+      "representative": "/assets/css/pages/es-privacidad.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/es-privacidad.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-es.css",
+      "representative": "/assets/css/pages/es.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/es.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-index.css",
+      "representative": "/assets/css/pages/index.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/index.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-precos.css",
+      "representative": "/assets/css/pages/precos.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/precos.css"
+      ]
+    },
+    {
+      "bundle": "/assets/css/bundles/page-privacidade.css",
+      "representative": "/assets/css/pages/privacidade.css",
+      "pages_count": 1,
+      "source_files": [
+        "/assets/css/pages/privacidade.css"
+      ]
+    }
+  ]
+}

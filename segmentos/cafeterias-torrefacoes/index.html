@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="#0e0e0c" name="theme-color">
+  <meta content="light" name="color-scheme">
+  <title>Listio — App de contagem de insumos para cafeterias e torrefações</title>
+  <meta
+    content="Controle e reposição de estoque para cafeterias e torrefações. Contagem no celular + sugestão do que comprar para reduzir perdas de insumos e garantir o café sempre fresco."
+    name="description">
+  <meta content="index,follow,max-image-preview:large" name="robots">
+  <link href="https://listio.com.br/segmentos/cafeterias-torrefacoes" rel="canonical">
+  <meta content="pt_BR" property="og:locale">
+  <meta content="website" property="og:type">
+  <meta content="Listio" property="og:site_name">
+  <meta content="Listio para Cafeterias — Reposição e Gestão de Insumos" property="og:title">
+  <meta
+    content="Contagem no celular + sugestão de compra para evitar falta de leite, grãos e descartáveis em cafeterias e torrefações."
+    property="og:description">
+  <meta content="https://listio.com.br/segmentos/cafeterias-torrefacoes" property="og:url">
+  <meta content="https://listio.com.br/og-listio.jpg" property="og:image">
+  <meta content="summary_large_image" name="twitter:card">
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/img/icone.png" />
+  <link rel="apple-touch-icon" href="/img/icone.png" />
+<link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Floating nav CSS -->
+  <link href="/assets/css/floating-menu.css" rel="stylesheet">
+
+  <!-- components.js -->
+  <script src="/components.js" defer></script>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Listio para Cafeterias e Torrefações",
+    "url": "https://listio.com.br/segmentos/cafeterias-torrefacoes",
+    "description": "Reposição inteligente e controle de estoque para cafeterias e torrefações com contagem móvel e sugestão de compras.",
+    "isPartOf": { "@type": "WebSite", "name": "Listio", "url": "https://listio.com.br/" }
+  }
+  </script>
+
+  <!-- GTM -->
+  <script src="/assets/js/pages/segmentos-cafeterias-torrefacoes.js"></script>
+
+  <style>
+    :root {
+      --lm-bg: #f5f5eb;
+      --lm-lime: #C8F135;
+      --lm-dark: #0e0e0c;
+      --lm-text-sub: rgba(14, 14, 12, 0.55);
+      --lm-border: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--lm-dark);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ── */
+    .seg-hero-wrap {
+      background: #f5f5eb;
+    }
+
+    .seg-hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 40px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: end;
+      position: relative;
+      z-index: 5;
+      overflow: visible;
+    }
+
+    @media(max-width: 800px) {
+      .seg-hero {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 0;
+        grid-template-areas: "right" "left";
+      }
+
+      .seg-hero-left {
+        order: 2;
+        grid-area: left;
+        padding: 12px 20px 40px;
+      }
+    }
+
+    .seg-hero-left {
+      padding-bottom: 72px;
+    }
+
+    .lm-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(14, 14, 12, 0.5);
+      margin-bottom: 20px;
+    }
+
+    .lm-eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #0e0e0c;
+      opacity: 0.5;
+    }
+
+    .seg-hero__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 700;
+      line-height: 1.03;
+      letter-spacing: -0.03em;
+      color: #0e0e0c;
+      margin-bottom: 24px;
+      max-width: 520px;
+    }
+
+    .seg-hero__sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: rgba(14, 14, 12, 0.55);
+      line-height: 1.65;
+      max-width: 420px;
+      margin-bottom: 32px;
+    }
+
+    .seg-hero__bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .seg-hero__bullets li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #0e0e0c;
+    }
+
+    .seg-bullet-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: #C8F135;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .seg-bullet-icon svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: #0e0e0c;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .seg-hero__ctas {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .seg-cta-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #0e0e0c;
+      color: #f5f5eb;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 13px 13px 13px 22px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .seg-cta-dark:hover {
+      background: #2a2a28;
+    }
+
+    .seg-cta-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #C8F135;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .seg-cta-circle svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: #0e0e0c;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .seg-cta-outline {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #0e0e0c;
+      padding: 13px 22px;
+      border-radius: 100px;
+      border: 2px solid rgba(14, 14, 12, 0.25);
+      text-decoration: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .seg-cta-outline:hover {
+      border-color: #0e0e0c;
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .seg-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .seg-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 100px;
+      background: rgba(0, 0, 0, 0.06);
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(14, 14, 12, 0.65);
+    }
+
+    /* ── IMAGEM DIREITA ── */
+    .seg-hero-right {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: visible;
+    }
+
+    .seg-hero-img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 20px;
+      transform: translateY(-80px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media(max-width: 800px) {
+      .seg-hero-right {
+        order: 1;
+        grid-area: right;
+        width: calc(100% - 32px);
+        height: 400px;
+        overflow: hidden;
+        border-radius: 20px;
+        margin: 12px 16px 0;
+      }
+
+      .seg-hero-img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        aspect-ratio: unset;
+        border-radius: 20px;
+        transform: none;
+        box-shadow: none;
+        object-position: center 20%;
+      }
+    }
+
+    /* ── SEÇÕES ── */
+    .seg-section {
+      padding: 88px 0;
+    }
+
+    .seg-section--white {
+      background: #fff;
+    }
+
+    .seg-section--cream {
+      background: #f5f5eb;
+    }
+
+    .seg-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    @media(max-width: 640px) {
+      .seg-container {
+        padding: 0 20px;
+      }
+
+      .seg-section {
+        padding: 60px 0;
+      }
+    }
+
+    .seg-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #999990;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .seg-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 700;
+      color: #0e0e0c;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+    }
+
+    .seg-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #88887e;
+      line-height: 1.65;
+      max-width: 560px;
+      margin-bottom: 52px;
+    }
+
+    /* ── CARDS ── */
+    .seg-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    @media(max-width: 900px) {
+      .seg-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 500px) {
+      .seg-grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .seg-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    @media(max-width: 800px) {
+      .seg-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .seg-card {
+      border-radius: 18px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .seg-card--cream {
+      background: #f5f5eb;
+      border: 1px solid #e2e1d8;
+    }
+
+    .seg-card--lime {
+      background: #C8F135;
+    }
+
+    .seg-card--white {
+      background: #fff;
+      border: 1px solid #e2e1d8;
+    }
+
+    .seg-card__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .seg-card--cream .seg-card__icon,
+    .seg-card--white .seg-card__icon {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .seg-card--lime .seg-card__icon {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .seg-card__icon svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .seg-card--cream .seg-card__icon svg,
+    .seg-card--white .seg-card__icon svg {
+      stroke: #555550;
+    }
+
+    .seg-card--lime .seg-card__icon svg {
+      stroke: #0e0e0c;
+    }
+
+    .seg-card__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #0e0e0c;
+      line-height: 1.2;
+    }
+
+    .seg-card__text {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #66665e;
+      flex: 1;
+    }
+
+    .seg-card--lime .seg-card__text {
+      color: #333328;
+    }
+
+    /* ── FAQ ── */
+    .seg-faq-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    @media(max-width: 700px) {
+      .seg-faq-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .seg-faq-items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .seg-faq-item {
+      border-bottom: 1px solid #d8d7d0;
+    }
+
+    .seg-faq-item summary {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0;
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0e0e0c;
+      line-height: 1.3;
+    }
+
+    .seg-faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .seg-faq-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #e2e1d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .seg-faq-btn svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: #555550;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      transition: transform 0.2s;
+    }
+
+    details[open] .seg-faq-btn {
+      background: #C8F135;
+    }
+
+    details[open] .seg-faq-btn svg {
+      stroke: #0e0e0c;
+      transform: rotate(45deg);
+    }
+
+    .seg-faq-answer {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #66665e;
+      line-height: 1.7;
+      padding-bottom: 20px;
+    }
+
+    /* ── CTA FINAL ── */
+    .seg-final-cta {
+      background: #C8F135;
+      padding: 88px 0;
+      text-align: center;
+    }
+
+    .seg-final-cta .seg-title {
+      color: #0e0e0c;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+
+    .seg-final-cta .seg-subtitle {
+      color: rgba(14, 14, 12, 0.65);
+      margin: 0 auto 36px;
+    }
+
+    .seg-final-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(14, 14, 12, 0.5);
+      margin-top: 14px;
+    }
+
+    /* ── ANIMAÇÕES ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+        filter: blur(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        filter: blur(4px);
+      }
+
+      to {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.94);
+        filter: blur(5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+      }
+    }
+
+    [data-anim] {
+      opacity: 0;
+    }
+
+    [data-anim].is-visible {
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+      animation-duration: 0.72s;
+    }
+
+    [data-anim="fade-up"].is-visible {
+      animation-name: fadeUp;
+    }
+
+    [data-anim="fade-in"].is-visible {
+      animation-name: fadeIn;
+    }
+
+    [data-anim="scale-in"].is-visible {
+      animation-name: scaleIn;
+    }
+
+    [data-delay="1"] {
+      animation-delay: 0.08s;
+    }
+
+    [data-delay="2"] {
+      animation-delay: 0.16s;
+    }
+
+    [data-delay="3"] {
+      animation-delay: 0.24s;
+    }
+
+    [data-delay="4"] {
+      animation-delay: 0.32s;
+    }
+
+    .hero-anim-1 {
+      animation: fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.10s both;
+    }
+
+    .hero-anim-2 {
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+    }
+
+    .hero-anim-3 {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
+    }
+
+    .hero-anim-4 {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.50s both;
+    }
+
+    .hero-anim-5 {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.20s both;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      [data-anim],
+      [data-anim].is-visible,
+      .hero-anim-1,
+      .hero-anim-2,
+      .hero-anim-3,
+      .hero-anim-4,
+      .hero-anim-5 {
+        opacity: 1 !important;
+        animation: none !important;
+        filter: none !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-PLSN85MQ"
+      style="display:none;visibility:hidden" width="0"></iframe></noscript>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="seg-hero-wrap">
+    <div class="seg-hero">
+      <div class="seg-hero-left">
+        <div class="lm-eyebrow hero-anim-1">
+          <span class="lm-eyebrow-dot"></span>
+          Para Cafeterias e Torrefações
+        </div>
+        <h1 class="seg-hero__title hero-anim-2">
+          Contagem de estoque para cafeterias e torrefações
+        </h1>
+        <p class="seg-hero__sub hero-anim-3">Em uma cafeteria, o leite, o café e os descartáveis não podem faltar — e o
+          estoque parado de grãos perde qualidade. O Listio transforma sua contagem em sugestão de compra para você
+          repor com precisão e manter o frescor de cada xícara.</p>
+        <ul class="seg-hero__bullets hero-anim-3">
+          <li>
+            <span class="seg-bullet-icon"><svg viewBox="0 0 12 12">
+                <polyline points="2,6 5,9 10,3" />
+              </svg></span>
+            Contagem rápida para insumos e descartáveis
+          </li>
+          <li>
+            <span class="seg-bullet-icon"><svg viewBox="0 0 12 12">
+                <polyline points="2,6 5,9 10,3" />
+              </svg></span>
+            Controle de validades e frescor dos grãos
+          </li>
+          <li>
+            <span class="seg-bullet-icon"><svg viewBox="0 0 12 12">
+                <polyline points="2,6 5,9 10,3" />
+              </svg></span>
+            Sugestão do que comprar para o próximo lote de torra
+          </li>
+        </ul>
+        <div class="seg-hero__ctas hero-anim-4">
+          <a class="seg-cta-dark" href="https://app.listio.com.br/cadastro"
+            data-track="seg_cafeterias_hero_cta_primary">
+            Começar agora — grátis
+            <span class="seg-cta-circle">
+              <svg viewBox="0 0 12 12">
+                <line x1="2" y1="6" x2="10" y2="6" />
+                <polyline points="7 3 10 6 7 9" />
+              </svg>
+            </span>
+          </a>
+          <a class="seg-cta-outline" href="#dores" data-track="seg_cafeterias_hero_cta_secondary">Ver dores que
+            resolve</a>
+        </div>
+        <div class="seg-chips hero-anim-4">
+          <span class="seg-chip">Sem cartão de crédito</span>
+          <span class="seg-chip">Foco em Torra</span>
+          <span class="seg-chip">Em minutos</span>
+        </div>
+      </div>
+
+      <div class="seg-hero-right hero-anim-5">
+        <img class="seg-hero-img" src="../../img/cafeteria-estoque.webp"
+          alt="Controle de estoque de café e insumos no celular" loading="eager">
+      </div>
+    </div>
+  </div>
+
+  <main id="top" role="main">
+
+    <!-- DORES -->
+    <section class="seg-section seg-section--white" id="dores">
+      <div class="seg-container">
+        <span class="seg-eyebrow" data-anim="fade-in">Dores comuns no balcão e na torra</span>
+        <h2 class="seg-title" data-anim="fade-up" data-delay="1">Café vive de frescor.<br>E o seu estoque não pode ser
+          um amontoado de papel.</h2>
+        <p class="seg-subtitle" data-anim="fade-up" data-delay="2">Quando falta leite no meio do turno ou embalagem na
+          torrefação, o prejuízo é imediato. O Listio organiza sua rotina para que você nunca pare de servir.</p>
+        <div class="seg-grid-4">
+          <div class="seg-card seg-card--lime" data-anim="scale-in" data-delay="1">
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22a8 8 0 0 0 8-8H4a8 8 0 0 0 8 8z" />
+                <path d="M5 10H4a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1" />
+                <path d="M19 10h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1" />
+                <path d="M12 2v8" />
+              </svg>
+            </div>
+            <div class="seg-card__title">Ruptura de Leite e Insumos</div>
+            <div class="seg-card__text">Acabar o leite vegetal ou o grão do expresso em horários de pico custa caro para
+              o faturamento.</div>
+          </div>
+          <div class="seg-card seg-card--cream" data-anim="scale-in" data-delay="2">
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg>
+            </div>
+            <div class="seg-card__title">Falta de Embalagens</div>
+            <div class="seg-card__text">Torrefações não podem parar o envio por falta de sacarias ou rótulos. Controle o
+              estoque de apoio.</div>
+          </div>
+          <div class="seg-card seg-card--cream" data-anim="scale-in" data-delay="3">
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div class="seg-card__title">Insumos Vencendo</div>
+            <div class="seg-card__text">Produtos refrigerados e itens de confeitaria têm vida curta. Visualize as datas
+              antes de perder dinheiro.</div>
+          </div>
+          <div class="seg-card seg-card--cream" data-anim="scale-in" data-delay="4">
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                <polyline points="17 6 23 6 23 12" />
+              </svg>
+            </div>
+            <div class="seg-card__title">Erro no Pedido Mensal</div>
+            <div class="seg-card__text">Comprar café verde demais ou de menos trava o caixa ou a produção. Use dados,
+              não "achismo".</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUÇÃO -->
+    <section class="seg-section seg-section--cream" id="solucao">
+      <div class="seg-container">
+        <span class="seg-eyebrow" data-anim="fade-in">Do Grão à Xícara</span>
+        <h2 class="seg-title" data-anim="fade-up" data-delay="1">Você conta no balcão.<br>O Listio gera a lista de
+          reposição.</h2>
+        <p class="seg-subtitle" data-anim="fade-up" data-delay="2">A lógica é simples: você garante o estoque real em
+          minutos e o Listio decide a compra com você. Ideal para donos e baristas.</p>
+        <div class="seg-grid-3">
+          <div class="seg-card seg-card--white" data-anim="scale-in" data-delay="1">
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="9" y1="7" x2="15" y2="7" />
+                <line x1="9" y1="11" x2="15" y2="11" />
+                <line x1="9" y1="15" x2="13" y2="15" />
+              </svg>
+            </div>
+            <div class="seg-card__title">Contagem de Balcão</div>
+            <div class="seg-card__text">Organize contagens rápidas de leite, grãos, xaropes e descartáveis sem usar
+              papel.</div>
+          </div>
+          <div class="seg-card seg-card--lime" data-anim="scale-in" data-delay="2">
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <div class="seg-card__title">Sugestão de Compra</div>
+            <div class="seg-card__text">Saiba exatamente quanto pedir para o próximo lote de torra ou para a semana na
+              cafeteria.</div>
+          </div>
+          <div class="seg-card seg-card--white" data-anim="scale-in" data-delay="3">
+            <div class="seg-card__icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M9 3v18" />
+                <path d="M3 9h6" />
+                <path d="M3 15h6" />
+              </svg>
+            </div>
+            <div class="seg-card__title">Organização por Categoria</div>
+            <div class="seg-card__text">Separe pedidos por laticínios, secos ou embalagens e agilize o recebimento das
+              mercadorias.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="seg-section seg-section--white" id="faq">
+      <div class="seg-container">
+        <div class="seg-faq-layout">
+          <div data-anim="fade-up">
+            <span class="seg-eyebrow">Perguntas frequentes</span>
+            <h2 class="seg-title" style="margin-bottom:16px;">Gestão de cafeteria<br>sem complicação.</h2>
+            <p class="seg-subtitle" style="margin-bottom:0;">Veja como o Listio ajuda baristas e torrefadores a otimizar
+              a rotina de estoque.</p>
+          </div>
+          <div class="seg-faq-items">
+            <details class="seg-faq-item" open data-anim="fade-up" data-delay="1">
+              <summary>Eu já tenho um sistema de PDV. Por que usar o Listio?<span class="seg-faq-btn"><svg
+                    viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="seg-faq-answer">Os PDVs são ótimos para venda, mas o estoque costuma dar "furo" por causa de
+                receitas e desperdício. O Listio foca na conferência física e na inteligência de compra, garantindo que
+                o seu estoque real seja o ponto de partida.</p>
+            </details>
+            <details class="seg-faq-item" data-anim="fade-up" data-delay="2">
+              <summary>Funciona para torrefações pequenas?<span class="seg-faq-btn"><svg viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="seg-faq-answer">Com certeza. Você pode controlar o estoque de café verde, embalagens e
+                acessórios de extração, recebendo avisos do que precisa ser comprado para não atrasar a produção.</p>
+            </details>
+            <details class="seg-faq-item" data-anim="fade-up" data-delay="3">
+              <summary>Consigo controlar o que está vencendo?<span class="seg-faq-btn"><svg viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="seg-faq-answer">Sim! Através da contagem, você consegue visualizar rapidamente produtos com
+                data de validade próxima, reduzindo o desperdício de leites e insumos de confeitaria.</p>
+            </details>
+            <details class="seg-faq-item" data-anim="fade-up" data-delay="4">
+              <summary>O cadastro é gratuito?<span class="seg-faq-btn"><svg viewBox="0 0 12 12">
+                    <line x1="6" y1="2" x2="6" y2="10" />
+                    <line x1="2" y1="6" x2="10" y2="6" />
+                  </svg></span></summary>
+              <p class="seg-faq-answer">Sim. Você pode começar a organizar seu estoque e testar a reposição inteligente
+                sem pagar nada no início.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="seg-final-cta" id="comecar">
+      <div class="seg-container">
+        <h2 class="seg-title" data-anim="fade-up">Nunca mais perca uma venda por falta de insumos.<br>Automatize sua
+          cafeteria agora.</h2>
+        <p class="seg-subtitle" data-anim="fade-up" data-delay="1">Contagem no celular + sugestão de pedido por giro
+          real. Ganhe tempo na gestão e foque na xícara perfeita.</p>
+        <div data-anim="fade-up" data-delay="2">
+          <a class="seg-cta-dark" href="https://app.listio.com.br/cadastro" data-track="seg_cafeterias_final_cta">
+            Criar minha conta grátis agora
+            <span class="seg-cta-circle">
+              <svg viewBox="0 0 12 12">
+                <line x1="2" y1="6" x2="10" y2="6" />
+                <polyline points="7 3 10 6 7 9" />
+              </svg>
+            </span>
+          </a>
+          <p class="seg-final-note">Sem necessidade de cartão • Ativação rápida</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-floating-nav"></div>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('[data-anim]');
+      if (!els.length) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+
+    document.addEventListener('DOMContentLoaded', () => { lucide.createIcons(); });
+  </script>
+
+</body>
+
+</html>

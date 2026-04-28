@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- MAIN PAGES -->
+  <url>
+    <loc>https://listio.com.br/en/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/pricing/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/contact/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/blog/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- LEGAL -->
+  <url>
+    <loc>https://listio.com.br/en/terms/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/privacy/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/cookies/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+  <!-- SEGMENTS -->
+  <url>
+    <loc>https://listio.com.br/en/segments/convenience-stores/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/supplement-stores/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/grocery-stores/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/distributors/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/beverages/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/restaurants-bars/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/pharmacies-beauty/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/cosmetics-beauty/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/clothing-stores/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/hardware-stores/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/e-commerce/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/coffee-shops/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/specialty-stores/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/pet-stores/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://listio.com.br/en/segments/auto-parts/</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- BLOG ARTICLES -->
+  <url>
+    <loc>https://listio.com.br/en/blog/optimizing-inventory-management-greengrocers-market-stalls/</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/maximizing-efficiency-stock-apps-multiple-store-locations/</loc>
+  <lastmod>2026-03-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/strategies-prevent-overspending-stock-purchases-retail/</loc>
+  <lastmod>2026-03-22</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/optimizing-inventory-reorder-point-australia/</loc>
+  <lastmod>2026-03-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/optimizing-stock-management-retail-dual-shifts/</loc>
+  <lastmod>2026-03-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/inventory-management-two-shifts/</loc>
+  <lastmod>2026-03-25</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-weekend-trade-spikes-stock-replenishment/</loc>
+  <lastmod>2026-03-27</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/mastering-weekly-drink-restocking/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-inventory-management-online-in-person-sales/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/hidden-costs-out-of-stock-items/</loc>
+  <lastmod>2026-03-29</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-inventory-challenges-technology-convenience-store-management/</loc>
+  <lastmod>2026-03-30</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-stock-control-airport-retail-seasonal-demand/</loc>
+  <lastmod>2026-03-31</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/mastering-safety-stock-corner-store-seasonal-demand/</loc>
+  <lastmod>2026-04-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/streamlining-purchase-orders-supplier-centric-approach/</loc>
+  <lastmod>2026-04-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/streamlining-inventory-counts-seasonal-product-categorization/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/mastering-inventory-management-stockouts-grocery-store/</loc>
+  <lastmod>2026-04-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-seasonal-trends-sweet-shops/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/streamlining-supplier-orders-mobile-guide/</loc>
+  <lastmod>2026-04-06</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/seasonal-trends-beer-wine-inventory/</loc>
+  <lastmod>2026-04-07</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/seasonal-fluctuations-bakery-stock-management/</loc>
+  <lastmod>2026-04-08</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/streamlining-inventory-audit-small-retailers/</loc>
+  <lastmod>2026-04-09</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/empowering-team-accurate-inventory-counts-customer-satisfaction/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-seasonal-trends-inventory-strategies/</loc>
+  <lastmod>2026-04-11</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/maximizing-space-efficiency-stockroom-organization/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/enhancing-cash-flow-small-stores-inventory-management/</loc>
+  <lastmod>2026-04-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-seasonal-demand-stock-control-airport-retail/</loc>
+  <lastmod>2026-04-14</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-seasonal-flavors-inventory-management-bakery/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/mastering-retail-success-opening-checklist-stock-verification/</loc>
+  <lastmod>2026-04-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/creative-solutions-managing-inventory-tight-spaces/</loc>
+  <lastmod>2026-04-17</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/mastering-inventory-simple-guide-stock-audits/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/leveraging-stock-data-supplier-negotiations/</loc>
+  <lastmod>2026-04-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/streamlining-supplier-relationships-organizing-purchase-orders/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/navigating-seasonal-fluctuations-grocery-delivery-inventory-management/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://listio.com.br/en/blog/smart-pricing-strategies-overstock-canadian-retail/</loc>
+  <lastmod></lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+</urlset>

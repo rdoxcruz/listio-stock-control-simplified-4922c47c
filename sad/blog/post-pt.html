@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#292929" />
+  <meta name="color-scheme" content="light" />
+
+  <title id="page-title">Artigo — Listio</title>
+  <meta name="description" id="page-desc" content="" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" id="page-canonical" href="https://listio.com.br/blog" />
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Listio" />
+  <meta property="og:title" id="og-title" content="Artigo — Listio" />
+  <meta property="og:description" id="og-desc" content="" />
+  <meta property="og:url" id="og-url" content="" />
+  <meta property="og:image" id="og-image" content="" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+  <link rel="manifest" href="/img/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/assets/css/bundles/page-index.css" />
+  <link rel="stylesheet" href="/assets/css/nav.css" />
+  <link rel="stylesheet" href="/assets/css/templates/blog-post.css" />
+  <script src="/assets/js/nav.js" defer></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NK2DN83B');</script>
+
+  <style>
+    :root {
+      --key:   #d4da42;
+      --sec:   #F0F1E9;
+      --white: #FFFFFF;
+      --ink:   #1a1a18;
+      --muted: #6b6b66;
+      --line:  #e2e3d8;
+    }
+
+    .page { padding: 56px 0 72px; }
+
+    .breadcrumb {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--ink); }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .article-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .article-excerpt {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--muted);
+      margin-bottom: 36px;
+      max-width: 600px;
+    }
+
+    .article-cover {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 48px;
+      display: block;
+      border: 1px solid var(--line);
+    }
+
+    .article-content {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--ink);
+      max-width: 100%;
+    }
+    .article-content p { margin-bottom: 28px; }
+    .article-content h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      margin: 48px 0 16px;
+    }
+    .article-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 28px 0 10px;
+    }
+    .article-content ul, .article-content ol {
+      padding-left: 20px;
+      margin-bottom: 28px;
+    }
+    .article-content li { margin-bottom: 6px; }
+    .article-content strong { font-weight: 600; }
+    .article-content blockquote {
+      background: var(--sec);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--key);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0 28px;
+    }
+    .article-content a {
+      color: var(--ink);
+      border-bottom: 1px solid var(--key);
+      text-decoration: none;
+    }
+    .article-content a:hover { border-bottom-color: var(--ink); }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-top: 56px;
+    }
+    .back-link:hover { color: var(--ink); }
+
+    .loading-state, .not-found-state {
+      text-align: center;
+      padding: 100px 0;
+      color: var(--muted);
+    }
+    .not-found-state h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .skeleton-line {
+      background: var(--sec);
+      border-radius: 4px;
+      height: 16px;
+      margin-bottom: 12px;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.5; }
+    }
+
+    .pricing-cta__box { max-width: 680px; }
+    .pricing-cta__title { margin: 0 0 14px; font-size: clamp(24px,3vw,36px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.18; }
+    .pricing-cta__subtitle { margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: rgba(26,26,24,.72); max-width: 56ch; }
+    .pricing-cta__actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .pricing-cta__note { margin: 10px 0 0; font-size: 14px; font-weight: 500; color: rgba(26,26,24,.68); }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK2DN83B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- HEADER -->
+  <div class="top-wrap">
+    <div class="container">
+      <header class="site-header" role="banner">
+        <div class="site-header__inner">
+          <a class="brand" href="/" aria-label="Listio — início">
+            <span class="brand__name">Listio</span>
+          </a>
+          <nav class="nav" aria-label="Navegação principal">
+            <a href="/#como-funciona">Como funciona</a>
+            <a href="/#recursos">Recursos</a>
+            <div class="nav__dropdown">
+              <button class="nav__dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+                Segmentos
+                <i class="icon icon--md" data-lucide="chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="nav__dropdown-menu" role="menu">
+                <a href="/segmentos/lojas-de-conveniencia" role="menuitem">Lojas de Conveniência</a>
+                <a href="/segmentos/lojas-de-suplementos" role="menuitem">Lojas de Suplementos</a>
+                <a href="/segmentos/mercados-de-bairro-mercearias" role="menuitem">Mercados de Bairro / Mercearias</a>
+                <a href="/segmentos/distribuidores" role="menuitem">Distribuidores</a>
+                <a href="/segmentos/bebidas" role="menuitem">Bebidas (Adegas, Distribuidoras, Depósitos)</a>
+                <a href="/segmentos/restaurantes-bares" role="menuitem">Restaurantes &amp; Bares</a>
+                <a href="/segmentos/farmacias-perfumarias" role="menuitem">Farmácias &amp; Perfumarias</a>
+                <a href="/segmentos/lojas-de-cosmeticos-beleza" role="menuitem">Lojas de Cosméticos e Beleza</a>
+                <a href="/segmentos/lojas-de-roupas" role="menuitem">Lojas de Roupas</a>
+                <a href="/segmentos/material-de-construcao" role="menuitem">Lojas de Material de Construção</a>
+                <a href="/segmentos/e-commerce" role="menuitem">E-commerce Pequeno e Médio</a>
+                <a href="/segmentos/cafeterias-torrefacoes" role="menuitem">Cafeterias &amp; Torrefações</a>
+                <a href="/segmentos/emporios-lojas-especializadas" role="menuitem">Empórios &amp; Lojas Especializadas</a>
+                <a href="/segmentos/pet-shops-agropecuaria" role="menuitem">Pet Shops e Agropecuária</a>
+                <a href="/segmentos/auto-pecas" role="menuitem">Auto Peças</a>
+              </div>
+            </div>
+            <a href="/precos">Preço</a>
+            <a href="/#faq">Dúvidas</a>
+            <a href="/contato">Contato</a>
+          </nav>
+          <div class="lang-switcher" aria-label="Idioma">
+            <span class="lang-switcher__current" role="button" tabindex="0" aria-expanded="false">
+              PT
+              <i class="icon icon--md" data-lucide="chevron-down" aria-hidden="true"></i>
+            </span>
+            <div class="lang-switcher__menu" id="lang-menu">
+              <a href="#" hreflang="pt-BR" aria-current="true">PT</a>
+              <a href="#" hreflang="en">EN</a>
+              <a href="#" hreflang="es">ES</a>
+            </div>
+          </div>
+          <div class="header-ctas" aria-label="Ações">
+            <a class="btn btn--ghost" href="https://app.listio.com.br/login">Entrar</a>
+            <a class="btn btn--primary" href="https://app.listio.com.br/cadastro">
+              Começar grátis
+              <i class="icon icon--md icon--on-lime" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+          <button class="mobile-toggle" type="button" aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu" data-mobile-toggle>
+            <i class="icon icon--lg" data-lucide="menu" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
+          <a href="/#como-funciona">Como funciona</a>
+          <a href="/#recursos">Recursos</a>
+          <div class="mobile-menu__item">
+            <button class="mobile-menu__toggle" type="button" data-mobile-submenu-toggle aria-expanded="false">
+              <span>Segmentos</span>
+              <i class="icon icon--md" data-lucide="chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="mobile-menu__submenu">
+              <a href="/segmentos/lojas-de-conveniencia">Lojas de Conveniência</a>
+              <a href="/segmentos/lojas-de-suplementos">Lojas de Suplementos</a>
+              <a href="/segmentos/mercados-de-bairro-mercearias">Mercados de Bairro / Mercearias</a>
+              <a href="/segmentos/distribuidores">Distribuidores</a>
+              <a href="/segmentos/bebidas">Bebidas (Adegas, Distribuidoras, Depósitos)</a>
+              <a href="/segmentos/restaurantes-bares">Restaurantes &amp; Bares</a>
+              <a href="/segmentos/farmacias-perfumarias">Farmácias &amp; Perfumarias</a>
+              <a href="/segmentos/lojas-de-cosmeticos-beleza">Lojas de Cosméticos e Beleza</a>
+              <a href="/segmentos/lojas-de-roupas">Lojas de Roupas</a>
+              <a href="/segmentos/material-de-construcao">Lojas de Material de Construção</a>
+              <a href="/segmentos/e-commerce">E-commerce Pequeno e Médio</a>
+              <a href="/segmentos/cafeterias-torrefacoes">Cafeterias &amp; Torrefações</a>
+              <a href="/segmentos/emporios-lojas-especializadas">Empórios &amp; Lojas Especializadas</a>
+              <a href="/segmentos/pet-shops-agropecuaria">Pet Shops e Agropecuária</a>
+              <a href="/segmentos/auto-pecas">Auto Peças</a>
+            </div>
+          </div>
+          <a href="/precos">Preço</a>
+          <a href="/#faq">Dúvidas</a>
+          <a href="/contato">Contato</a>
+          <div class="mobile-lang" aria-label="Idioma">
+            <a href="/blog" hreflang="pt-BR">PT</a>
+            <a href="/en/blog" hreflang="en">EN</a>
+            <a href="/es/blog" hreflang="es">ES</a>
+          </div>
+          <div class="mobile-ctas">
+            <a class="btn btn--ghost" href="https://app.listio.com.br/login">Entrar</a>
+            <a class="btn btn--primary" href="https://app.listio.com.br/cadastro">
+              Começar grátis
+              <i class="icon icon--md icon--on-lime" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="page" role="main">
+    <div class="container">
+      <div id="main-content">
+        <div class="loading-state">
+          <div class="skeleton-line" style="width:60%;margin:0 auto 16px;"></div>
+          <div class="skeleton-line" style="width:80%;margin:0 auto 12px;"></div>
+          <div class="skeleton-line" style="width:75%;margin:0 auto 12px;"></div>
+          <div class="skeleton-line" style="width:50%;margin:0 auto;"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- CTA BANNER -->
+  <section class="section section--cta">
+    <div class="container">
+      <div class="pricing-cta__box">
+        <h2 class="pricing-cta__title">
+          Comece no gratuito.<br />
+          Faça upgrade quando precisar.
+        </h2>
+        <p class="pricing-cta__subtitle">
+          Crie sua conta e comece a usar o Listio hoje. Quando Pro e Multilojas estiverem
+          disponíveis, você ativa na hora — sem mudar sua rotina.
+        </p>
+        <div class="pricing-cta__actions">
+          <a class="btn btn--dark btn--xl" href="https://app.listio.com.br/cadastro">
+            Criar conta grátis
+            <i class="icon icon--md" data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="pricing-cta__note">Sem cartão de crédito · Comece em minutos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="listio-footer" role="contentinfo">
+    <div class="container listio-footer__inner">
+      <div class="listio-footer__top">
+        <div class="listio-footer__brand">
+          <div class="listio-footer__logo">Listio</div>
+          <p class="listio-footer__desc">
+            Reposição de estoque inteligente para pequenos comércios.<br />
+            Checklist no celular, clareza sobre o que comprar.
+          </p>
+          <a class="listio-footer__pill" href="https://app.listio.com.br/cadastro">Começar grátis →</a>
+        </div>
+        <nav aria-label="Produto" class="listio-footer__col">
+          <span class="listio-footer__title">Produto</span>
+          <a class="listio-footer__link" href="/precos">Preços</a>
+          <a class="listio-footer__link" href="/#como-funciona">Como funciona</a>
+          <a class="listio-footer__link" href="/#recursos">Recursos</a>
+          <a class="listio-footer__link" href="/#para-quem">Para quem é</a>
+          <a class="listio-footer__link" href="/blog/">Blog</a>
+        </nav>
+        <nav aria-label="Segmentos" class="listio-footer__col">
+          <span class="listio-footer__title">Segmentos</span>
+          <a class="listio-footer__link" href="/segmentos/lojas-de-conveniencia">Conveniência</a>
+          <a class="listio-footer__link" href="/segmentos/mercados-de-bairro-mercearias">Mercearias</a>
+          <a class="listio-footer__link" href="/segmentos/bebidas">Adegas e Bebidas</a>
+          <a class="listio-footer__link" href="/segmentos/restaurantes-bares">Bares e Restaurantes</a>
+          <a class="listio-footer__link" href="/segmentos/e-commerce">E-commerce</a>
+        </nav>
+        <nav aria-label="Legal" class="listio-footer__col">
+          <span class="listio-footer__title">Legal</span>
+          <a class="listio-footer__link" href="/contato">Contato</a>
+          <a class="listio-footer__link" href="https://help.listio.com.br/" target="_blank" rel="noopener">Documentação</a>
+          <a class="listio-footer__link" href="/termos" rel="nofollow">Termos de Uso</a>
+          <a class="listio-footer__link" href="/privacidade" rel="nofollow">Política de Privacidade</a>
+        </nav>
+      </div>
+      <div class="listio-footer__bottom">
+        <span class="listio-footer__copy">&copy; 2026 Listio. Todos os direitos reservados.</span>
+        <span class="listio-footer__mini-links">
+          <a href="/termos" rel="nofollow">Termos</a>
+          <a href="/privacidade" rel="nofollow">Privacidade</a>
+          <a href="/contato">Contato</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>if (window.lucide) lucide.createIcons();</script>
+
+  <script>
+    const POSTS_URL = '/posts.json';
+
+    function getSlug() {
+      return new URLSearchParams(window.location.search).get('slug') || '';
+    }
+
+    function formatDate(iso) {
+      const d = new Date(iso);
+      return d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+    }
+
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    async function loadPost() {
+      const slug = getSlug();
+      const main = document.getElementById('main-content');
+
+      if (!slug) { renderNotFound(main); return; }
+
+      try {
+        const res = await fetch(POSTS_URL + '?v=' + Date.now());
+        if (!res.ok) throw new Error();
+
+        const posts = await res.json();
+        const post  = posts.find(p => p.slug === slug && p.ativo !== false);
+
+        if (!post) { renderNotFound(main); return; }
+
+        // Atualiza meta tags
+        const title = post.titulo + ' — Listio';
+        document.getElementById('page-title').textContent     = title;
+        document.getElementById('page-desc').content          = post.resumo;
+        document.getElementById('page-canonical').href        = `https://listio.com.br/blog/${post.slug}`;
+        document.getElementById('og-title').content           = title;
+        document.getElementById('og-desc').content            = post.resumo;
+        document.getElementById('og-url').content             = `https://listio.com.br/blog/${post.slug}`;
+        if (post.imagem) document.getElementById('og-image').content = post.imagem;
+        document.title = title;
+
+        const imgHtml = post.imagem
+          ? `<img class="article-cover" src="${escHtml(post.imagem)}" alt="${escHtml(post.titulo)}" />`
+          : '';
+
+        main.innerHTML = `
+          <div class="breadcrumb">
+            <a href="/">Listio</a>
+            <span>›</span>
+            <a href="/blog">Blog</a>
+            <span>›</span>
+            <span>${escHtml(post.titulo)}</span>
+          </div>
+          <article>
+            <header>
+              <div class="post-meta">
+                <time>${formatDate(post.publicado_em)}</time>
+              </div>
+              <h1 class="article-title">${escHtml(post.titulo)}</h1>
+              <p class="article-excerpt">${escHtml(post.resumo)}</p>
+              ${imgHtml}
+            </header>
+            <div class="article-content">
+              ${post.conteudo}
+            </div>
+            <a href="/blog" class="back-link">← Voltar para o blog</a>
+          </article>
+        `;
+
+        if (window.lucide) lucide.createIcons();
+
+      } catch {
+        renderNotFound(main);
+      }
+    }
+
+    function renderNotFound(main) {
+      main.innerHTML = `
+        <div class="not-found-state">
+          <h2>Artigo não encontrado</h2>
+          <p>O artigo que você procura não está disponível ou foi removido.</p>
+          <br/>
+          <a href="/blog" class="btn btn--primary" style="display:inline-flex;margin-top:16px;">← Voltar para o blog</a>
+        </div>`;
+    }
+
+    loadPost();
+  </script>
+</body>
+</html>

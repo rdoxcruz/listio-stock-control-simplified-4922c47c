@@ -1,0 +1,352 @@
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.shell{display:flex;width:100%;min-height:780px;background:#f4f4f4;font-family:var(--font-sans,sans-serif);font-size:13px;color:#1a1a18}
+.sidebar{width:52px;flex-shrink:0;background:#ffffff;border-right:0.5px solid #e6e6e6;display:flex;flex-direction:column;align-items:center;padding:12px 0;gap:4px}
+.sb-logo{width:32px;height:32px;background:#cbd9e4;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#1a1a18;margin-bottom:12px}
+.sb-ico{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#aaa}
+.sb-ico:hover{background:#f4f4f4}
+.sb-ico.active{background:#1a1a18;color:#ffffff}
+.sb-ico svg{width:16px;height:16px}
+.sb-div{width:20px;height:0.5px;background:#eeeeee;margin:6px 0}
+.sb-foot{margin-top:auto}
+.sb-avatar{width:28px;height:28px;border-radius:50%;background:#cbd9e4;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#1a1a18}
+.main{flex:1;display:flex;flex-direction:column}
+.topbar{background:#ffffff;border-bottom:0.5px solid #e6e6e6;padding:0 24px;height:48px;display:flex;align-items:center;justify-content:flex-end;gap:12px}
+.tb-bell{width:32px;height:32px;border-radius:8px;border:0.5px solid #e6e6e6;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;color:#999}
+.tb-bell-dot{width:6px;height:6px;background:#ff6b6b;border-radius:50%;position:absolute;top:6px;right:6px}
+.tb-user{display:flex;align-items:center;gap:7px;background:#f4f4f4;border-radius:8px;padding:4px 10px 4px 5px;cursor:pointer}
+.tb-user-av{width:24px;height:24px;border-radius:50%;background:#cbd9e4;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#1a1a18}
+.tb-user-name{font-size:12px;font-weight:500;color:#1a1a18}
+.content{padding:20px 24px;flex:1;overflow:auto;background:#f4f4f4}
+.store-pill{display:flex;align-items:center;gap:6px;background:#ffffff;border:0.5px solid #e0e0e0;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:500;color:#1a1a18;cursor:pointer;margin-bottom:18px;width:fit-content}
+.store-dot{width:7px;height:7px;background:#cbd9e4;border-radius:50%}
+.page-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px}
+.page-title{font-size:20px;font-weight:600;color:#1a1a18}
+.page-sub{font-size:12px;color:#999;margin-top:2px}
+.ph-actions{display:flex;gap:8px;align-items:center}
+.btn-ghost{background:#ffffff;border:0.5px solid #e0e0e0;border-radius:7px;padding:7px 14px;font-size:12px;font-weight:500;color:#555;cursor:pointer}
+.btn-primary{background:#1a1a18;border:none;border-radius:7px;padding:7px 16px;font-size:12px;font-weight:600;color:#ffffff;cursor:pointer}
+.alert-strip{display:flex;align-items:center;gap:8px;background:#fffdf0;border:0.5px solid #ffe0ad;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:12px;color:#7a5200}
+.alert-strip svg{width:13px;height:13px;color:#e09000;flex-shrink:0}
+.alert-link{margin-left:auto;font-size:11px;color:#b36b00;font-weight:500;white-space:nowrap;cursor:pointer}
+.row1{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.card{background:#ffffff;border-radius:12px;border:0.5px solid #e6e6e6;overflow:hidden}
+/* hero agora usa #cbd9e4 */
+.hero{background:#cbd9e4;border-radius:12px;padding:20px;overflow:hidden}
+.hero-label{font-size:11px;color:rgba(0,0,0,.4);margin-bottom:2px}
+.hero-value{font-size:28px;font-weight:700;color:#1a1a18;line-height:1.1}
+.hero-sub{font-size:11px;color:rgba(0,0,0,.35);margin-top:3px}
+.hero-units-num{font-size:18px;font-weight:600;color:#1a1a18}
+.hero-units-label{font-size:10px;color:rgba(0,0,0,.4)}
+.hero-pills{display:flex;gap:6px;margin-top:14px;flex-wrap:wrap}
+.hero-pill{background:rgba(0,0,0,.08);border:0.5px solid rgba(0,0,0,.1);border-radius:6px;padding:5px 10px;font-size:11px;color:rgba(0,0,0,.5)}
+.hero-pill span{font-weight:600;color:#1a1a18}
+.hero-pill span.r{color:#9a1c1c}
+/* metric cards com cores personalizadas */
+.mc{padding:16px 18px}
+.mc-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.mc-icon svg{width:16px;height:16px}
+.mc-label{font-size:11px;color:rgba(0,0,0,.45);margin-bottom:3px}
+.mc-val{font-size:22px;font-weight:700;line-height:1.1}
+.mc-sub{font-size:11px;color:rgba(0,0,0,.35);margin-top:3px}
+.card-ruptura{background:#f6d375;border-radius:12px;border:0.5px solid #e8c350;overflow:hidden}
+.card-abaixo{background:#e2a9a9;border-radius:12px;border:0.5px solid #cc8888;overflow:hidden}
+.row2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.row3{display:grid;grid-template-columns:1.4fr 1fr;gap:12px}
+.sec-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 0}
+.sec-title{font-size:12px;font-weight:600;color:#1a1a18}
+.sec-link{font-size:11px;color:#555;cursor:pointer}
+.tabs{display:flex;border-bottom:0.5px solid #eeeeee;padding:0 16px;margin-top:10px}
+.tab{font-size:11px;padding:6px 12px;color:#999;cursor:pointer;border-bottom:1.5px solid transparent;margin-bottom:-0.5px}
+.tab.active{color:#1a1a18;font-weight:600;border-bottom-color:#1a1a18}
+.prow{display:flex;align-items:center;gap:10px;padding:9px 16px;border-bottom:0.5px solid #f4f4f4}
+.prow:last-child{border-bottom:none}
+.p-ico{width:30px;height:30px;border-radius:7px;background:#f4f4f4;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#777;flex-shrink:0}
+.p-name{font-size:12px;font-weight:500;color:#1a1a18}
+.p-cat{font-size:10px;color:#bbb}
+.p-right{margin-left:auto;text-align:right}
+.badge{font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;display:inline-block}
+.br{background:#fde8b8;color:#7a4500}
+.bw{background:#f5e0e0;color:#8a2020}
+.bok{background:#d8ecc8;color:#2a5000}
+.p-qty{font-size:10px;color:#888;margin-top:2px}
+.bar-wrap{padding:10px 16px 2px}
+.brow{margin-bottom:10px}
+.bl{display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px}
+.bn{color:#1a1a18;font-weight:500}
+.bp{color:#bbb}
+.btrack{height:4px;background:#f0f0f0;border-radius:2px}
+.bfill{height:4px;border-radius:2px}
+.cl-ok{display:flex;align-items:center;gap:6px;background:#e8f0d8;border-radius:7px;padding:7px 12px;margin:10px 16px;font-size:11px;color:#2a5000;font-weight:500}
+.cl-ok svg{width:13px;height:13px;flex-shrink:0}
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:0 16px 14px}
+.cat-item{display:flex;align-items:center;gap:8px;padding:7px 10px;background:#f4f4f4;border-radius:8px;cursor:pointer}
+.cat-abbr{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0}
+.cat-name{font-size:11px;font-weight:500;color:#1a1a18}
+.cat-check{width:12px;height:12px;border-radius:50%;border:1.5px solid #4a7a20;background:#b8d898;margin-left:auto;flex-shrink:0}
+.sup-metrics{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:0.5px solid #eeeeee}
+.sup-m{padding:10px 14px;border-right:0.5px solid #eeeeee}
+.sup-m:last-child{border-right:none}
+.sup-m-lbl{font-size:10px;color:#bbb;margin-bottom:2px}
+.sup-m-val{font-size:14px;font-weight:700;color:#1a1a18}
+.srow{display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:0.5px solid #f4f4f4}
+.srow:last-child{border-bottom:none}
+.s-ico{width:28px;height:28px;border-radius:7px;background:#e8edf2;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.s-ico svg{width:13px;height:13px;color:#4a6a80}
+.s-name{font-size:12px;font-weight:500;color:#1a1a18}
+.s-ch{font-size:10px;color:#bbb;margin-top:1px}
+.s-right{margin-left:auto;text-align:right}
+.s-val{font-size:12px;font-weight:600;color:#1a1a18}
+.s-note{font-size:10px;color:#bbb;margin-top:1px}
+.s-bar{width:56px;height:3px;background:#f0f0f0;border-radius:2px;margin:3px 0 0 auto}
+.s-bar-fill{height:3px;border-radius:2px;background:#cbd9e4}
+.ped-metrics{display:flex;gap:14px;padding:14px 18px 10px}
+.ped-m{flex:1}
+.ped-m-lbl{font-size:11px;color:#999;margin-bottom:2px}
+.ped-m-val{font-size:18px;font-weight:700;color:#1a1a18}
+.ped-divider{width:0.5px;background:#eeeeee}
+.order-row{display:flex;align-items:center;gap:10px;padding:7px 12px;background:#f4f4f4;border-radius:8px;margin:0 16px 7px}
+.order-ico{width:28px;height:28px;border-radius:6px;background:#ffffff;border:0.5px solid #e6e6e6;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#666;flex-shrink:0}
+.order-name{font-size:12px;font-weight:500;color:#1a1a18}
+.order-sub{font-size:10px;color:#bbb}
+.order-right{margin-left:auto;text-align:right}
+.order-val{font-size:11px;font-weight:600;color:#1a1a18;margin-top:2px}
+</style>
+
+<div class="shell">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sb-logo">L</div>
+    <div class="sb-ico active">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg>
+    </div>
+    <div class="sb-ico">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="2"/><line x1="5" y1="6" x2="11" y2="6"/><line x1="5" y1="9" x2="9" y2="9"/></svg>
+    </div>
+    <div class="sb-ico">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><polyline points="8,5 8,8 10,10"/></svg>
+    </div>
+    <div class="sb-ico">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4h14M1 8h10M1 12h12"/></svg>
+    </div>
+    <div class="sb-ico">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="13" r="1.5"/><circle cx="12" cy="13" r="1.5"/><polyline points="1,2 3,2 5,10 13,10 14,4 4,4"/></svg>
+    </div>
+    <div class="sb-div"></div>
+    <div class="sb-ico">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v2M8 12v2M2 8h2M12 8h2M3.76 3.76l1.41 1.41M10.83 10.83l1.41 1.41M3.76 12.24l1.41-1.41M10.83 5.17l1.41-1.41"/><circle cx="8" cy="8" r="2.5"/></svg>
+    </div>
+    <div class="sb-foot">
+      <div class="sb-avatar">RD</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="tb-bell">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1a5 5 0 0 1 5 5v3l1.5 2.5H1.5L3 9V6a5 5 0 0 1 5-5z"/><path d="M6.5 13.5a1.5 1.5 0 0 0 3 0"/></svg>
+        <div class="tb-bell-dot"></div>
+      </div>
+      <div class="tb-user">
+        <div class="tb-user-av">RD</div>
+        <span class="tb-user-name">Rodolfo</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="store-pill">
+        <div class="store-dot"></div>
+        Breja Box 01 &nbsp;⌄
+      </div>
+
+      <div class="page-head">
+        <div>
+          <div class="page-title">Overview</div>
+          <div class="page-sub">Semanal #5 · 09 mar — 15 mar · 2026</div>
+        </div>
+        <div class="ph-actions">
+          <button class="btn-ghost">Exportar</button>
+          <button class="btn-primary">+ Novo checklist</button>
+        </div>
+      </div>
+
+      <div class="alert-strip">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2L1 14h14L8 2z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12.5" r=".5" fill="currentColor"/></svg>
+        31 produtos com dados incompletos — sem preço ou fornecedor cadastrado
+        <span class="alert-link">Resolver →</span>
+      </div>
+
+      <!-- ROW 1 -->
+      <div class="row1">
+        <div class="hero">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <div>
+              <div class="hero-label">Valor do ciclo atual (custo)</div>
+              <div class="hero-value">R$ 32.532</div>
+              <div class="hero-sub">Baseado no checklist atual</div>
+            </div>
+            <div style="text-align:right">
+              <div class="hero-units-num">2.694</div>
+              <div class="hero-units-label">unidades</div>
+            </div>
+          </div>
+          <div class="hero-pills">
+            <div class="hero-pill">Ideal <span>R$ 38.216</span></div>
+            <div class="hero-pill">Baixa est. <span class="r">R$ 1.093</span></div>
+            <div class="hero-pill">Repor <span>R$ 13.281</span></div>
+          </div>
+        </div>
+
+        <!-- card ruptura #f6d375 -->
+        <div class="card-ruptura">
+          <div class="mc">
+            <div class="mc-icon" style="background:rgba(0,0,0,.08)">
+              <svg viewBox="0 0 16 16" fill="none" stroke="#7a4000" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><line x1="8" y1="5" x2="8" y2="8"/><circle cx="8" cy="11" r=".5" fill="#7a4000"/></svg>
+            </div>
+            <div class="mc-label">Em ruptura</div>
+            <div class="mc-val" style="color:#1a1a18">40</div>
+            <div class="mc-sub">produtos sem estoque</div>
+          </div>
+        </div>
+
+        <!-- card abaixo #e2a9a9 -->
+        <div class="card-abaixo">
+          <div class="mc">
+            <div class="mc-icon" style="background:rgba(0,0,0,.08)">
+              <svg viewBox="0 0 16 16" fill="none" stroke="#7a1a1a" stroke-width="1.5"><path d="M8 2L1 14h14L8 2z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12.5" r=".5" fill="#7a1a1a"/></svg>
+            </div>
+            <div class="mc-label">Abaixo do ideal</div>
+            <div class="mc-val" style="color:#1a1a18">61</div>
+            <div class="mc-sub">precisam de reposição</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="row2">
+        <div class="card">
+          <div class="sec-head"><span class="sec-title">Produtos que precisam de atenção</span><span class="sec-link">Ver todos →</span></div>
+          <div class="tabs">
+            <div class="tab active">Ruptura (40)</div>
+            <div class="tab">Abaixo (61)</div>
+          </div>
+          <div style="padding:4px 0">
+            <div class="prow">
+              <div class="p-ico">CC</div>
+              <div><div class="p-name">Coca Cola Zero 2L</div><div class="p-cat">Refrigerantes · Edilson</div></div>
+              <div class="p-right"><span class="badge br">Ruptura</span><div class="p-qty">0 / 2 un.</div></div>
+            </div>
+            <div class="prow">
+              <div class="p-ico">CB</div>
+              <div><div class="p-name">Cavalo Branco 1L</div><div class="p-cat">Destilados · Rota</div></div>
+              <div class="p-right"><span class="badge br">Ruptura</span><div class="p-qty">0 / 3 un.</div></div>
+            </div>
+            <div class="prow">
+              <div class="p-ico">DO</div>
+              <div><div class="p-name">Doritos 37g</div><div class="p-cat">Salgados · Rota</div></div>
+              <div class="p-right"><span class="badge br">Ruptura</span><div class="p-qty">0 / 25 un.</div></div>
+            </div>
+            <div class="prow">
+              <div class="p-ico">HN</div>
+              <div><div class="p-name">Heineken long neck</div><div class="p-cat">Cervejas · Ambev</div></div>
+              <div class="p-right"><span class="badge bw">Abaixo</span><div class="p-qty">8 / 24 un.</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="sec-head"><span class="sec-title">Cobertura por categoria</span></div>
+          <div class="bar-wrap">
+            <div class="brow"><div class="bl"><span class="bn">Refrigerantes</span><span class="bp">78%</span></div><div class="btrack"><div class="bfill" style="width:78%;background:#cbd9e4"></div></div></div>
+            <div class="brow"><div class="bl"><span class="bn">Cervejas</span><span class="bp">64%</span></div><div class="btrack"><div class="bfill" style="width:64%;background:#cbd9e4"></div></div></div>
+            <div class="brow"><div class="bl"><span class="bn">Energéticos</span><span class="bp">42%</span></div><div class="btrack"><div class="bfill" style="width:42%;background:#f6d375"></div></div></div>
+            <div class="brow"><div class="bl"><span class="bn">Destilados</span><span class="bp">31%</span></div><div class="btrack"><div class="bfill" style="width:31%;background:#f6d375"></div></div></div>
+            <div class="brow"><div class="bl"><span class="bn">Snacks</span><span class="bp">18%</span></div><div class="btrack"><div class="bfill" style="width:18%;background:#e2a9a9"></div></div></div>
+            <div class="brow"><div class="bl"><span class="bn">Vinhos</span><span class="bp">85%</span></div><div class="btrack"><div class="bfill" style="width:85%;background:#cbd9e4"></div></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="sec-head"><span class="sec-title">Checklists</span><span class="sec-link">Ver todos →</span></div>
+          <div class="cl-ok">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><polyline points="5,8 7,10 11,6"/></svg>
+            Período concluído — 100%
+          </div>
+          <div class="cat-grid">
+            <div class="cat-item"><div class="cat-abbr" style="background:#cbd9e4;color:#1a1a18">TA</div><span class="cat-name">Tabacaria</span><div class="cat-check"></div></div>
+            <div class="cat-item"><div class="cat-abbr" style="background:#f6d375;color:#1a1a18">CE</div><span class="cat-name">Cervejas</span><div class="cat-check"></div></div>
+            <div class="cat-item"><div class="cat-abbr" style="background:#cbd9e4;color:#1a1a18">RE</div><span class="cat-name">Refrigerantes</span><div class="cat-check"></div></div>
+            <div class="cat-item"><div class="cat-abbr" style="background:#e2a9a9;color:#1a1a18">EN</div><span class="cat-name">Energéticos</span><div class="cat-check"></div></div>
+            <div class="cat-item"><div class="cat-abbr" style="background:#f6d375;color:#1a1a18">VI</div><span class="cat-name">Vinhos</span><div class="cat-check"></div></div>
+            <div class="cat-item"><div class="cat-abbr" style="background:#cbd9e4;color:#1a1a18">SA</div><span class="cat-name">Salgados</span><div class="cat-check"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 3 -->
+      <div class="row3">
+        <div class="card">
+          <div class="sec-head"><span class="sec-title">Fornecedores · ciclo atual</span><span class="sec-link">Ver todos →</span></div>
+          <div class="sup-metrics">
+            <div class="sup-m"><div class="sup-m-lbl">Total gasto</div><div class="sup-m-val">R$ 52.023</div></div>
+            <div class="sup-m"><div class="sup-m-lbl">Pedidos</div><div class="sup-m-val">32</div></div>
+            <div class="sup-m"><div class="sup-m-lbl">Fornecedores ativos</div><div class="sup-m-val">9</div></div>
+          </div>
+          <div style="padding:4px 0">
+            <div class="srow">
+              <div class="s-ico"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="1.5"/><path d="M5 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/></svg></div>
+              <div><div class="s-name">Ambev</div><div class="s-ch">App · 4 pedidos · 07/03</div></div>
+              <div class="s-right"><div class="s-val">R$ 7.541</div><div class="s-bar"><div class="s-bar-fill" style="width:100%"></div></div><div class="s-note">maior gasto</div></div>
+            </div>
+            <div class="srow">
+              <div class="s-ico" style="background:#fdf0c8"><svg viewBox="0 0 16 16" fill="none" stroke="#7a4500" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="1.5"/><path d="M5 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/></svg></div>
+              <div><div class="s-name">Edilson</div><div class="s-ch">WhatsApp · 3 pedidos · 11/03</div></div>
+              <div class="s-right"><div class="s-val">R$ 3.722</div><div class="s-bar"><div class="s-bar-fill" style="width:49%;background:#f6d375"></div></div><div class="s-note">rascunho pendente</div></div>
+            </div>
+            <div class="srow">
+              <div class="s-ico" style="background:#f5e0e0"><svg viewBox="0 0 16 16" fill="none" stroke="#7a1a1a" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="1.5"/><path d="M5 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/></svg></div>
+              <div><div class="s-name">Rota Distribuidora</div><div class="s-ch">WhatsApp · 2 pedidos · 10/03</div></div>
+              <div class="s-right"><div class="s-val">R$ 2.024</div><div class="s-bar"><div class="s-bar-fill" style="width:27%;background:#e2a9a9"></div></div><div class="s-note">recebido</div></div>
+            </div>
+            <div class="srow">
+              <div class="s-ico" style="background:#f4f4f4"><svg viewBox="0 0 16 16" fill="none" stroke="#aaa" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="1.5"/><path d="M5 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/></svg></div>
+              <div><div class="s-name">Açaí Atacadista</div><div class="s-ch">WhatsApp · 0 pedidos</div></div>
+              <div class="s-right"><div class="s-val" style="color:#bbb">R$ 0</div><div class="s-bar"><div class="s-bar-fill" style="width:0%"></div></div><div class="s-note">sem pedidos</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="sec-head"><span class="sec-title">Pedidos do ciclo</span><span class="sec-link">Ver pedidos →</span></div>
+          <div class="ped-metrics">
+            <div class="ped-m">
+              <div class="ped-m-lbl">Valor total</div>
+              <div class="ped-m-val">R$ 5.746</div>
+              <div style="font-size:10px;color:#888;margin-top:2px">−36% vs anterior</div>
+            </div>
+            <div class="ped-divider"></div>
+            <div class="ped-m" style="padding-left:14px">
+              <div class="ped-m-lbl">Pedidos</div>
+              <div class="ped-m-val">2</div>
+              <div style="font-size:10px;color:#bbb;margin-top:2px">ciclo anterior: 3</div>
+            </div>
+          </div>
+          <div style="padding-bottom:14px">
+            <div class="order-row">
+              <div class="order-ico">ED</div>
+              <div><div class="order-name">Edilson</div><div class="order-sub">262 itens · 11 mar</div></div>
+              <div class="order-right"><span class="badge br">Rascunho</span><div class="order-val">R$ 3.722</div></div>
+            </div>
+            <div class="order-row">
+              <div class="order-ico">RD</div>
+              <div><div class="order-name">Rota Distribuidora</div><div class="order-sub">202 itens · 10 mar</div></div>
+              <div class="order-right"><span class="badge bok">Recebido</span><div class="order-val">R$ 2.024</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

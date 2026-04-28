@@ -1,0 +1,170 @@
+/* ============================================================
+   LISTIO — page-legal.css
+   Shared by /termos and /privacidade
+   ============================================================ */
+
+/* ── Legal page layout ──────────────────────────────────────── */
+.legal{
+  padding:32px 0 96px;
+}
+
+.legal__body{
+  display:grid;
+  grid-template-columns:1fr min(720px, 100%);
+  gap:48px;
+  align-items:start;
+}
+
+/* Single-column fallback (used here — sidebar optional later) */
+.legal .container{
+  display:grid;
+  gap:0;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.legal__card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--r-2xl);
+  padding:36px 40px 48px;
+  max-width:800px;
+  margin-inline:auto;
+}
+
+@media(max-width:680px){
+  .legal__card{ padding:24px 20px 40px; }
+}
+
+/* ── Header of card ─────────────────────────────────────────── */
+.legal__top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.legal__eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  color:var(--charcoal);
+  padding:6px 14px;
+  border-radius:var(--r-pill);
+  font-weight:500;
+  font-size:13px;
+  line-height:1;
+  margin-bottom:12px;
+}
+
+.legal__title{
+  margin:0 0 6px;
+  font-size:clamp(26px, 3vw, 36px);
+  line-height:1.14;
+  letter-spacing:-0.03em;
+  font-weight:600;
+}
+
+.legal__meta{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ── TOC ────────────────────────────────────────────────────── */
+.legal__toc{
+  margin:20px 0 0;
+  padding:16px;
+  border-radius:var(--r-xl);
+  background:var(--canvas);
+  border:1px solid var(--line);
+}
+
+.legal__toc strong{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  margin-bottom:10px;
+}
+
+.legal__toc a{
+  display:inline-block;
+  margin:4px 6px 0 0;
+  padding:6px 12px;
+  border-radius:var(--r-pill);
+  border:1px solid var(--line);
+  background:var(--white);
+  font-size:13px;
+  font-weight:500;
+  color:var(--ink);
+  transition:background .1s ease, border-color .1s ease;
+}
+
+.legal__toc a:hover{
+  background:var(--surface);
+  border-color:rgba(26,26,24,.22);
+}
+
+/* ── Divider ────────────────────────────────────────────────── */
+.legal__divider{
+  height:1px;
+  background:var(--line);
+  border:0;
+  margin:28px 0 0;
+}
+
+/* ── Content ────────────────────────────────────────────────── */
+.legal__content{
+  margin-top:28px;
+  display:grid;
+  gap:32px;
+}
+
+.legal__section{
+  scroll-margin-top:48px;
+}
+
+.legal__h2{
+  margin:0 0 10px;
+  font-size:18px;
+  line-height:1.25;
+  letter-spacing:-0.02em;
+  font-weight:600;
+  color:var(--ink);
+}
+
+.legal__p{
+  margin:0 0 10px;
+  color:rgba(26,26,24,.78);
+  font-size:15px;
+  line-height:1.75;
+}
+.legal__p:last-child{ margin-bottom:0; }
+
+.legal__list{
+  margin:0;
+  padding-left:20px;
+  color:rgba(26,26,24,.78);
+  font-size:15px;
+  line-height:1.75;
+  display:grid;
+  gap:6px;
+}
+
+.legal__callout{
+  margin-top:12px;
+  background:var(--canvas);
+  border:1px solid var(--line);
+  border-left:3px solid var(--green);
+  border-radius:var(--r-lg);
+  padding:14px 16px;
+  color:rgba(26,26,24,.82);
+  font-size:15px;
+  line-height:1.65;
+}
